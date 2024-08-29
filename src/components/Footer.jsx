@@ -26,7 +26,7 @@ export default function Footer() {
                             <FaPaperPlane />
                         </div>
                     </div>
-                    <div className="w-[320px]">
+                    <div className="sm:w-[320px]">
                         <p className="text-lg text-slate-400">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum reiciendis disti nctio voluptatem quod ipsa, alias accusa mus ullam architecto vitae. Suscipit.</p>
                     </div>
                 </div>

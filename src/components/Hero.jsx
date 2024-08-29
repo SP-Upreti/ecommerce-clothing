@@ -43,6 +43,20 @@ export default function Hero() {
                     }}
                     loop={true}
                     autoplay={{ delay: 4000 }}
+                    breakpoints={
+                        {
+                            1200: {
+                                slidesPerView: 3
+                            },
+                            800: {
+                                slidesPerView: 2
+                            },
+                            500: {
+                                slidesPerView: 1
+                            },
+
+                        }
+                    }
                 >
                     {
                         [...Array(6)].map((_, index) => (

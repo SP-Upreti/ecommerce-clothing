@@ -4,7 +4,7 @@ import '../App.css'
 
 export default function CardLg({ text, price, photo }) {
     return (
-        <div className="w-[80%] flex justify-between items-center mx-auto border p-4">
+        <div className="w-[80%] flex justify-between items-center mx-auto border p-4 flex-col-reverse lg:flex-row">
             <div className="">
                 <h2 className="text-2xl font-bold"> Beautiful Cannon Camera</h2>
                 <ul className="mt-5 flex flex-col gap-3 text-lg">
