@@ -1,11 +1,11 @@
 import { CiStar } from "react-icons/ci";
 import { FaCheck } from "react-icons/fa";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 
 export default function Details() {
+    const [qty, setQty] = useState('');
     useEffect(() => {
-        // Scroll to the top of the page on component mount
         window.scrollTo(0, 0);
     }, []);
     return (
