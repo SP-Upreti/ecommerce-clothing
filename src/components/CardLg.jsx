@@ -4,10 +4,10 @@ import '../App.css'
 
 export default function CardLg({ text, price, photo }) {
     return (
-        <div className="w-[80%] flex justify-between items-center mx-auto border p-4 flex-col-reverse lg:flex-row">
+        <div className="sm:w-[80%] flex justify-between items-center mx-auto border p-4 flex-col-reverse lg:flex-row">
             <div className="">
-                <h2 className="text-2xl font-bold"> Beautiful Cannon Camera</h2>
-                <ul className="mt-5 flex flex-col gap-3 text-lg">
+                <h2 className="text-xl sm:text-2xl font-bold"> Beautiful Cannon Camera</h2>
+                <ul className="mt-5 flex flex-col gap-3 sm:text-lg">
                     <li className="flex gap-2 items-center "><span className="text-[var(--primary)]"><FontAwesomeIcon icon={faCircleCheck} /></span><span>DIGIC 8 processor</span></li>
                     <li className="flex gap-2 items-center "><span className="text-[--primary]"><FontAwesomeIcon icon={faCircleCheck} /></span><span>Dual Pixel CMOS AF</span></li>
                     <li className="flex gap-2 items-center "><span className="text-[--primary]"><FontAwesomeIcon icon={faCircleCheck} /></span><span>6.5 fps Continuous shooting</span></li>
@@ -18,7 +18,7 @@ export default function CardLg({ text, price, photo }) {
                     <button className="text-[--secondary] border border-[--secondary]  px-5 text-lg py-1 rounded-md">more info</button>
                 </div>
             </div>
-            <div className=" h-[400px] ">
+            <div className=" sm:h-[400px] ">
                 <img src="/camera.png" alt="" className="h-full" />
             </div>
         </div>

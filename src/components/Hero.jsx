@@ -14,7 +14,7 @@ import { faArrowLeft, faArrowRight } from '@fortawesome/free-solid-svg-icons';
 
 export default function Hero() {
     return (
-        <div className="py-10">
+        <div className="py-5 sm:py-10">
             <Swiper
                 // install Swiper modules
                 modules={[A11y, Autoplay, Pagination]}
@@ -31,7 +31,7 @@ export default function Hero() {
                     ))
                 }
             </Swiper>
-            <div className="mt-7 w-[80%] mx-auto relative">
+            <div className="mt-7 w-full sm:w-[80%] mx-auto relative">
                 <Swiper
                     // install Swiper modules
                     modules={[A11y, Autoplay, Pagination, Navigation]}
@@ -45,15 +45,12 @@ export default function Hero() {
                     autoplay={{ delay: 4000 }}
                     breakpoints={
                         {
-                            1200: {
-                                slidesPerView: 3
-                            },
-                            800: {
-                                slidesPerView: 2
-                            },
-                            500: {
+                            0: {
                                 slidesPerView: 1
                             },
+                            1200: {
+                                slidesPerView: 3
+                            }
 
                         }
                     }

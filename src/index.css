@@ -45,6 +45,16 @@ code {
   right: -50px;
 }
 
+@media screen and(max-width:500px) {
+  .swiper-button-prev-custom {
+    left: -10px !important;
+  }
+
+  .swiper-button-next-custom {
+    right: -10px !important;
+  }
+}
+
 /* Add hover effect */
 .swiper-button-prev-custom,
 .swiper-button-next-custom {

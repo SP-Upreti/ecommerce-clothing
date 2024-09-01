@@ -1,6 +1,6 @@
 export default function CardSm() {
     return (
-        <div className="w-[370px] border h-[120px] p-4 flex gap-4 items-center">
+        <div className=" w-[250px] sm:w-[370px] border h-[120px] p-4 flex gap-4 items-center">
             <div className="">
                 <img src="/samsung.png" alt="" className="w-[80px]" />
             </div>

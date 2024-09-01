@@ -2,9 +2,9 @@ import { FaDiscord, FaEnvelope, FaFacebook, FaInstagram, FaPaperPlane } from "re
 
 export default function Footer() {
     return (
-        <footer className="bg-[--primary] p-10 text-white">
-            <div className="flex justify-between gap-10 flex-wrap w-[90%] mx-auto">
-                <div className="w-[350px] flex flex-col gap-4">
+        <footer className="bg-[--primary] p-4 sm:p-10 text-white w-screen overflow-hidden">
+            <div className="flex justify-between gap-10 flex-wrap sm:w-[90%] mx-auto">
+                <div className="sm:w-[350px] flex flex-col gap-4">
                     <div className="">
                         <p className="text-3xl font-bold font-[roboto]">B-Bazar</p>
                     </div>
@@ -20,13 +20,13 @@ export default function Footer() {
                 </div>
                 <div className="flex flex-col gap-4">
                     <h2 className="text-2xl font-bold ">Subscribe us</h2>
-                    <div className="flex items-center bg-yellow-400 text-2xl rounded-md overflow-hidden">
+                    <div className="flex items-center flex-wrap bg-yellow-400 text-2xl rounded-md overflow-hidden">
                         <input type="email" name="" id="" placeholder="upreti@gmail.com" className="  border-2  py-1 text-black px-2" />
                         <div className="px-3  ">
                             <FaPaperPlane />
                         </div>
                     </div>
-                    <div className="sm:w-[320px]">
+                    <div className="w-[100%] md:w-[320px]">
                         <p className="text-lg text-slate-400">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum reiciendis disti nctio voluptatem quod ipsa, alias accusa mus ullam architecto vitae. Suscipit.</p>
                     </div>
                 </div>
