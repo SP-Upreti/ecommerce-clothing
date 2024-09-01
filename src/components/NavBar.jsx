@@ -26,7 +26,7 @@ export default function NavBar() {
                         <img src="/B-Bazar.png" alt="Logo" className="" />
                     </Link>
                 </div>
-                <div className="menu">
+                <div className="menu hidden lg:flex">
                     <ul className="flex gap-10 items-center">
                         <li className={`items ${activePath === "/" ? "active" : "text-slate-400 "} min-w-[140px] `}>
                             <Link to="/" className="flex gap-2 text-xl items-center">
