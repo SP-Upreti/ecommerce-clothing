@@ -1,21 +1,25 @@
 export default function Contact() {
     return (
         <div className="max-w-screen-lg mx-auto p-5">
-            <div className="grid grid-cols-1 md:grid-cols-12 border">
-                <div className="bg-gray-900 md:col-span-4 p-10 text-white">
+            <div className="text-center py-10 ">
+                <h2 className="font-bold text-3xl">Contact Us</h2>
+                <div className="mt-5 text-lg mx-auto">Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi distinctio nobis aperiam laboriosam consectetur, placeat adipisci? Voluptates natus blanditiis impedit.</div>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-12 border border-slate-400">
+                <div className=" md:col-span-4 p-10 text-black  border-r-2">
                     <p className="mt-4 text-sm leading-7 font-regular uppercase">
                         Contact
                     </p>
                     <h3 className="text-3xl sm:text-4xl leading-normal font-extrabold tracking-tight">
-                        Get In <span className="text-indigo-600">Touch</span>
+                        Get In <span className="text-[--secondary]">Touch</span>
                     </h3>
-                    <p className="mt-4 leading-7 text-gray-200">
-                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-                        industry's standard dummy text ever since the 1500s.
+                    <p className="mt-4 leading-7 ">
+                        Lorem Ipsum is simply dum my ok text of the printing and ufhu hbfg typesetting industry. Lorem Ipsum has been the
+                        industry's standardt dummy text ever since the 1500s.
                     </p>
 
-                    <div className="flex items-center mt-5">
-                        <svg className="h-6 mr-2 text-indigo-600" fill="currentColor" version="1.1"
+                    <div className="flex items-center mt-5 gap-4">
+                        <svg className="h-6 mr-2 text-[--secondary]" fill="currentColor" version="1.1"
                             xmlns="http://www.w3.org/2000/svg" viewBox="0 0 489.536 489.536"
                             xmlnsXlink="http://www.w3.org/1999/xlink" enableBackground="new 0 0 489.536 489.536">
                             <g>
@@ -30,12 +34,12 @@ export default function Contact() {
                                 </g>
                             </g>
                         </svg>
-                        <span className="text-sm">House #14, Street #12, Darulaman Road, Kabul, Afghanistan.</span>
+                        <span className="text-lg">Koteswor, Kathmandu</span>
                     </div>
-                    <div className="flex items-center mt-5">
-                        <svg className="h-6 mr-2 text-indigo-600" fill="currentColor" version="1.1" id="Capa_1"
+                    <div className="flex items-center gap-4 mt-5">
+                        <svg className="h-6 mr-2 text-[--secondary]" fill="currentColor" version="1.1" id="Capa_1"
                             xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                            viewBox="0 0 60.002 60.002" style={{enableBackground:'new 0 0 60.002 60.002'}} xmlSpace="preserve">
+                            viewBox="0 0 60.002 60.002" style={{ enableBackground: 'new 0 0 60.002 60.002' }} xmlSpace="preserve">
                             <g>
                                 <path d="M59.002,37.992c-3.69,0-6.693-3.003-6.693-6.693c0-0.553-0.447-1-1-1s-1,0.447-1,1c0,4.794,3.899,8.693,8.693,8.693
 		c0.553,0,1-0.447,1-1S59.554,37.992,59.002,37.992z">
@@ -68,12 +72,12 @@ export default function Contact() {
                                 </path>
                             </g>
                         </svg>
-                        <span className="text-sm">+93 749 99 65 50</span>
+                        <span className="text-lg">+93 749 99 65 50</span>
                     </div>
-                    <div className="flex items-center mt-5">
-                        <svg className="h-6 mr-2 text-indigo-600" fill="currentColor" version="1.1" id="Capa_1"
+                    <div className="flex items-center gap-4 mt-5">
+                        <svg className="h-6 mr-2 text-[--secondary]" fill="currentColor" version="1.1" id="Capa_1"
                             xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                            viewBox="0 0 300.988 300.988" style={{enableBackground:`new 0 0 300.988 300.988`}}
+                            viewBox="0 0 300.988 300.988" style={{ enableBackground: `new 0 0 300.988 300.988` }}
                             xmlSpace="preserve">
                             <g>
                                 <g>
@@ -87,7 +91,7 @@ export default function Contact() {
                                 </g>
                             </g>
                         </svg>
-                        <span className="text-sm">24/7</span>
+                        <span className="text-lg">24/7</span>
                     </div>
 
                 </div>
@@ -100,8 +104,8 @@ export default function Contact() {
                             </label>
                             <input
                                 className="appearance-none block w-full bg-gray-200 text-gray-700 border border-red-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
-                                id="grid-first-name" type="text" placeholder="Jane"/>
-                                <p className="text-red-500 text-xs italic">Please fill out this field.</p>
+                                id="grid-first-name" type="text" placeholder="Jane" />
+                            <p className="text-red-500 text-xs italic">Please fill out this field.</p>
                         </div>
                         <div className="w-full md:w-1/2 px-3">
                             <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
@@ -110,7 +114,7 @@ export default function Contact() {
                             </label>
                             <input
                                 className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
-                                id="grid-last-name" type="text" placeholder="Doe"/>
+                                id="grid-last-name" type="text" placeholder="Doe" />
                         </div>
                     </div>
                     <div className="flex flex-wrap -mx-3 mb-6">
@@ -121,7 +125,7 @@ export default function Contact() {
                             </label>
                             <input
                                 className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
-                                id="grid-email" type="email" placeholder="********@*****.**"/>
+                                id="grid-email" type="email" placeholder="********@*****.**" />
                         </div>
                     </div>
 
@@ -137,10 +141,10 @@ export default function Contact() {
                         <div className="flex justify-between w-full px-3">
                             <div className="md:flex md:items-center">
                                 <label className="block text-gray-500 font-bold">
-                                    <input className="mr-2 leading-tight" type="checkbox"/>
-                                        <span className="text-sm">
-                                            Send me your newsletter!
-                                        </span>
+                                    <input className="mr-2 leading-tight" type="checkbox" />
+                                    <span className="text-sm">
+                                        Send me your newsletter!
+                                    </span>
                                 </label>
                             </div>
                             <button

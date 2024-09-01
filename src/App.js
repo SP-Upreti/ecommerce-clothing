@@ -8,6 +8,7 @@ import Authorize from "./components/Authorize";
 import Cart from "./components/Cart";
 import Contact from './components/Contact';
 import { MetaData } from './Data/Global';
+import ProductPage from './components/ProductPage';
 
 
 function Layout() {
@@ -49,6 +50,7 @@ function Layout() {
         <Route path="/login" element={<Authorize />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/products/:id" element={<Details />} />
+        <Route path="/products" element={<ProductPage />} />
         <Route path="/cart" element={<Cart />} />
       </Routes>
       {!hideNavAndFooter && <Footer />}
