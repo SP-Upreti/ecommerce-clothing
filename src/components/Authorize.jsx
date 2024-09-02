@@ -29,13 +29,13 @@ export default function Authorize() {
     }, [user]);
 
     return (
-        <section className={`  z-[5] p-5  h-screen `}>
+        <section className={`  z-[5] sm:p-5  h-screen `}>
 
             <div className="mt-4 flex justify-center items-center w-[98vw] h-full box-border overflow-hidden">
 
                 {
                     login ? (
-                        <div className="max-w-md relative flex flex-col p-4 rounded-md text-black bg-white w-[25vw] shadow-lg">
+                        <div className="sm:max-w-md relative flex flex-col p-4 rounded-md text-black bg-white sm:w-[25vw] shadow-lg">
                             <div className="text-2xl font-bold mb-2 text-[#1e0e4b] text-center">
                                 Welcome back to <span className="text-[#7747ff]">App</span>
                             </div>
