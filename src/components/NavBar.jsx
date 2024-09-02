@@ -29,7 +29,7 @@ export default function NavBar() {
                         <img src="/B-Bazar.png" alt="Logo" className="w-[80px] md:w-auto" />
                     </Link>
                 </div>
-                <div className=" menu hidde lg:flex" style={{ display: toggle ? 'flex' : 'none' }}>
+                <div className={`menu hidde ${toggle ? 'flex' : 'hidden'} lg:flex`}>
                     <ul className={` ${toggle ? 'absolute' : 'relative'}  top-[10%] left-5 z-[9] bg-white lg:relative  flex flex-col lg:flex-row gap-10 items-center`}>
                         <li className={`items ${activePath === "/" ? "active" : "text-slate-400 "} min-w-[140px] `}>
                             <Link to="/" className="flex gap-2 lg:text-xl items-center">
