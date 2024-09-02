@@ -35,7 +35,7 @@ export default function Authorize() {
 
                 {
                     login ? (
-                        <div className="sm:max-w-md relative flex flex-col p-4 rounded-md text-black bg-white sm:w-[25vw] shadow-lg">
+                        <div className="sm:max-w-md relative flex flex-col p-4 rounded-md text-black bg-white border-2 sm:border-0 sm:w-[25vw] shadow-lg">
                             <div className="text-2xl font-bold mb-2 text-[#1e0e4b] text-center">
                                 Welcome back to <span className="text-[#7747ff]">App</span>
                             </div>
