@@ -6,7 +6,7 @@ export default function Footer() {
             <div className="flex justify-between gap-10 flex-wrap sm:w-[90%] mx-auto">
                 <div className="sm:w-[350px] flex flex-col gap-4">
                     <div className="">
-                        <p className="text-3xl font-bold font-[roboto]">B-Bazar</p>
+                        <p className="text-2xl text-[--primary] font-bold font-[roboto]">FarmHub</p>
                     </div>
                     <p className="text-slate-400">
                         Lorem ipsum dolor sit amet consectetur adipisng elit. Sed, minus! A similique obcaecati omnijhbhs consectetur et atque doloremque quo tempjhore dolorum, nam, aliquid vero repudiandae, culpuga amet eius ea provident.
@@ -19,20 +19,20 @@ export default function Footer() {
                     </div>
                 </div>
                 <div className="flex flex-col gap-4">
-                    <h2 className="text-2xl font-bold ">Subscribe us</h2>
-                    <div className="flex items-center flex-wrap bg-[--primary]  text-2xl rounded-sm overflow-hidden">
-                        <input type="email" name="" id="" placeholder="upreti@gmail.com" className=" py-1 text-black px-2" />
-                        <div className="px-3 text-white ">
+                    <h2 className="text-xl font-bold ">Subscribe us</h2>
+                    <div className="flex items-center flex-wrap bg-[--primary]  text-xl rounded-sm overflow-hidden w-fit">
+                        <input type="email" name="" id="" placeholder="example@gmail.com" className=" py-1 text-black px-2" />
+                        <div className="px-3 text-white w-fit ">
                             <FaPaperPlane />
                         </div>
                     </div>
                     <div className="w-[100%] md:w-[320px]">
-                        <p className="text-lg text-slate-400">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum reiciendis disti nctio voluptatem quod ipsa, alias accusa mus ullam architecto vitae. Suscipit.</p>
+                        <p className=" text-slate-400">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum reiciendis disti nctio voluptatem quod ipsa, alias accusa mus ullam architecto vitae. Suscipit.</p>
                     </div>
                 </div>
                 <div className="">
-                    <h2 className="text-2xl font-bold mb-2">Navigate</h2>
-                    <ul className="text-xl text-slate-400 font-semibold flex flex-col gap-4">
+                    <h2 className="text-xl font-bold mb-2">Navigate</h2>
+                    <ul className=" text-slate-400 font-semibold flex flex-col gap-4">
                         <li>Home</li>
                         <li>Products</li>
                         <li>Contacs</li>
@@ -40,8 +40,8 @@ export default function Footer() {
                     </ul>
                 </div>
                 <div className="">
-                    <h2 className="text-2xl font-bold mb-2">Help Center</h2>
-                    <ul className="text-xl text-slate-400 font-semibold flex flex-col gap-4">
+                    <h2 className="text-xl font-bold mb-2">Help Center</h2>
+                    <ul className=" text-slate-400 font-semibold flex flex-col gap-4">
                         <li>Customer Care</li>
                         <li>News</li>
                         <li>Blogs</li>

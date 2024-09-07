@@ -14,9 +14,14 @@
 }
 
 /* From Uiverse.io by Yaya12085 */
-#checkbox {
-    display: none;
+input[type='checkbox'] {
+    height: 19px;
+    width: 18px;
+    /* background-color: red; */
+  
 }
+
+
 
 .toggle {
     position: relative;
