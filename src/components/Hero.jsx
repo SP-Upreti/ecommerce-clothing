@@ -1,5 +1,7 @@
 import { A11y, Autoplay, Pagination, Navigation } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
+import { salesItem, categoriesData } from '../Data/Global';
+
 
 // Import Swiper styles
 import 'swiper/css';
@@ -20,18 +22,21 @@ export default function Hero() {
                 modules={[A11y, Autoplay, Pagination]}
                 spaceBetween={50}
                 slidesPerView={1}
-                pagination={{ clickable: true }}
+                loop={true}
+                className=''
+                // pagination={{ clickable: true }}
+
                 autoplay={{ delay: 3000 }}
             >
                 {
-                    [...Array(3)].map((_, index) => (
+                    salesItem.map((data, index) => (
                         <SwiperSlide key={index}>
-                            <CardLg />
+                            <CardLg img={data.image} title={data.name} features={data.features} />
                         </SwiperSlide>
                     ))
                 }
             </Swiper>
-            <div className="mt-7 w-full sm:w-[80%] mx-auto relative">
+            <div className="mt-10 w-full sm:w-[80%] mx-auto relative">
                 <Swiper
                     // install Swiper modules
                     modules={[A11y, Autoplay, Pagination, Navigation]}
@@ -56,9 +61,9 @@ export default function Hero() {
                     }
                 >
                     {
-                        [...Array(6)].map((_, index) => (
+                        categoriesData.map((data, index) => (
                             <SwiperSlide key={index}>
-                                <CardSm />
+                                <CardSm title={data.name} items={data.availableItems} image={data.photo} price={data.priceRange} />
                             </SwiperSlide>
                         ))
                     }

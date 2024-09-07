@@ -1,6 +1,6 @@
 :root {
-    --primary: #17153B;
-    --secondary: #2E236C;
+    --primary: #3D6734;
+    --secondary: #f1f1f1;
     --ternary: #433D8B;
     --low: #C8ACD6;
 
@@ -10,7 +10,7 @@
 
 .active {
     font-weight: 700;
-    color: #2E236C;
+    color: var(--primary);
 }
 
 /* From Uiverse.io by Yaya12085 */
@@ -20,14 +20,14 @@
 
 .toggle {
     position: relative;
-    width: 40px;
-    height: 30px;
+    width: 30px;
+    height: 20px;
     cursor: pointer;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
-    gap: 10px;
+    gap: 5px;
     transition-duration: .5s;
 }
 

@@ -58,7 +58,7 @@ code {
 /* Add hover effect */
 .swiper-button-prev-custom,
 .swiper-button-next-custom {
-  background: var(--ternary);
+  background: #23a006;
   color: white;
   transition: all 300ms ease-in-out;
   /* Change this to the desired hover background */

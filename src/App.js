@@ -43,7 +43,7 @@ function Layout() {
   }, []);
 
   return (
-    <>
+    <div className='bg-[--secondary]' >
       {!hideNavAndFooter && <NavBar />}
       <Routes>
         <Route path="/" element={<Home />} />
@@ -54,7 +54,7 @@ function Layout() {
         <Route path="/cart" element={<Cart />} />
       </Routes>
       {!hideNavAndFooter && <Footer />}
-    </>
+    </div>
   );
 }
 

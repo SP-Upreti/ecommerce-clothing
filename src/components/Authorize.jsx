@@ -1,5 +1,3 @@
-import { faClose } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useEffect, useState } from "react";
 
 export default function Authorize() {
@@ -31,7 +29,7 @@ export default function Authorize() {
     return (
         <section className={`  z-[5] sm:p-5  h-screen `}>
 
-            <div className="mt-4 flex justify-center items-center w-[98vw] h-full box-border overflow-hidden">
+            <div className="mt-4 flex justify-center items-center w-screen sm:w-[98vw]  box-border ">
 
                 {
                     login ? (

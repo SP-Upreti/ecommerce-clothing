@@ -22,16 +22,16 @@ export default function NavBar() {
     }, [location]);
 
     return (
-        <nav className={`border border-slate-300 p-3 pb-2 sm:px-12 flex justify-between lg:items-center relative ${toggle ? 'h-screen' : 'h-auto'} lg:h-auto  bg-white`}>
+        <nav className={`border border-slate-300 p-3 pb-2 sm:px-12 flex ] justify-between lg:items-center relative ${toggle ? 'h-screen' : 'h-auto'} lg:h-auto  bg-[--primary`}>
             <div className="flex gap-[8rem] lg:items-center">
                 <div className="logo">
                     <Link to={'/'}>
-                        <img src="/B-Bazar.png" alt="Logo" className="w-[80px] md:w-auto" />
+                        <img src="/logo.svg" alt="Logo" className="w-[80px]  md:w-[120px]" />
                     </Link>
                 </div>
                 <div className={`menu hidde ${toggle ? 'flex' : 'hidden'} lg:flex`}>
-                    <ul className={` ${toggle ? 'absolute' : 'relative'}  top-[10%] left-5 z-[9] bg-white lg:relative  flex flex-col lg:flex-row gap-10 items-center`}>
-                        <li className={`items ${activePath === "/" ? "active" : "text-slate-400 "} min-w-[140px] `}>
+                    <ul className={` ${toggle ? 'absolute' : 'relative'}  top-[10%] left-5 z-[9]  lg:relative  flex flex-col lg:flex-row gap-10 items-center`}>
+                        <li className={`items ${activePath === "/" ? "active" : "text-slate-600 "} min-w-[140px] `}>
                             <Link to="/" className="flex gap-2 lg:text-xl items-center">
                                 <span>
                                     <FontAwesomeIcon icon={faHome} />
@@ -39,7 +39,7 @@ export default function NavBar() {
                                 <span>Home</span>
                             </Link>
                         </li>
-                        <li className={`items ${activePath === "/products" ? "active" : "text-slate-400"} min-w-[140px] `}>
+                        <li className={`items ${activePath === "/products" ? "active" : "text-slate-600"} min-w-[140px] `}>
                             <Link to="/products" className="flex gap-2 lg:text-xl items-center ">
                                 <span>
                                     <FontAwesomeIcon icon={faBagShopping} />
@@ -47,7 +47,7 @@ export default function NavBar() {
                                 <span>Products</span>
                             </Link>
                         </li>
-                        <li className={`items ${activePath === "/about" ? "active" : "text-slate-400"} min-w-[140px] `}>
+                        <li className={`items ${activePath === "/about" ? "active" : "text-slate-600"} min-w-[140px] `}>
                             <Link to="/about" className="flex gap-2 lg:text-xl items-center ">
                                 <span>
                                     <FontAwesomeIcon icon={faAddressCard} />
@@ -55,7 +55,7 @@ export default function NavBar() {
                                 <span>About</span>
                             </Link>
                         </li>
-                        <li className={`items ${activePath === "/contact" ? "active" : "text-slate-400"} min-w-[140px] `}>
+                        <li className={`items ${activePath === "/contact" ? "active" : "text-slate-600"} min-w-[140px] `}>
                             <Link to="/contact" className="flex gap-2 lg:text-xl items-center ">
                                 <span>
                                     <FontAwesomeIcon icon={faPhoneAlt} />
