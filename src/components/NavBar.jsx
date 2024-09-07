@@ -22,13 +22,15 @@ export default function NavBar() {
     }, [location]);
 
     return (
-        <nav className={`border border-slate-300 p-3 pb-2 sm:px-12 flex ] justify-between lg:items-center relative ${toggle ? 'h-screen' : 'h-auto'} lg:h-auto  bg-[--primary`}>
-            <div className="flex gap-[8rem] lg:items-center">
+        <nav className={`border border-slate-300 p-3 pb-2 sm:px-12 flex ] justify-between  relative lg:h-auto  bg-[--primary   ${toggle ? 'h-screen items-start ' : 'h-auto items-center'}`}>
+            <div className="flex gap-[8rem] lg:items-center ">
+
                 <div className="logo">
                     <Link to={'/'}>
                         <img src="/logo.svg" alt="Logo" className="w-[80px]  md:w-[120px]" />
                     </Link>
                 </div>
+
                 <div className={`menu hidde ${toggle ? 'flex' : 'hidden'} lg:flex`}>
                     <ul className={` ${toggle ? 'absolute' : 'relative'}  top-[10%] left-5 z-[9]  lg:relative  flex flex-col lg:flex-row gap-10 items-center`}>
                         <li className={`items ${activePath === "/" ? "active" : "text-slate-600 "} min-w-[140px] `}>
@@ -65,8 +67,10 @@ export default function NavBar() {
                         </li>
                     </ul>
                 </div>
+
             </div>
-            <ul className="flex gap-6 md:gap-10 lg:items-center z-10">
+
+            <ul className={`flex gap-6 md:gap-10 lg:items-center z-10  ${toggle ? 'pt-2' : ''}`}>
                 <Link to="/login">
                     <li className="cursor-pointer">
                         <FontAwesomeIcon icon={faRightToBracket} className="md:text-2xl text-slate-500" />
@@ -80,7 +84,7 @@ export default function NavBar() {
                         </span>
                     </li>
                 </Link>
-                <li className="ps-4 lg:hidden" ><span onClick={() => { setToggle(!toggle) }} aria-expanded={toggle} aria-controls="menu">{toggle ? (<IoClose />) : (<FaBars />)}</span ></li>
+                <li className="ps-4 lg:hidden " ><span onClick={() => { setToggle(!toggle) }} aria-expanded={toggle} aria-controls="menu">{toggle ? (<IoClose className="text-[20px]" />) : (<FaBars />)}</span ></li>
             </ul>
         </nav>
     );

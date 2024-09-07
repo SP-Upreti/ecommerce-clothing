@@ -37,23 +37,16 @@ code {
   justify-content: center;
 }
 
-.swiper-button-prev-custom {
-  left: -50px;
-}
+@media screen and (max-width: 425px) {
 
-.swiper-button-next-custom {
-  right: -50px;
-}
-
-@media screen and(max-width:500px) {
-  .swiper-button-prev-custom {
-    left: -10px !important;
-  }
-
+  .swiper-button-prev-custom,
   .swiper-button-next-custom {
-    right: -10px !important;
+    width: 20px !important;
+    height: 20px !important;
+    font-size: 10px;
   }
 }
+
 
 /* Add hover effect */
 .swiper-button-prev-custom,

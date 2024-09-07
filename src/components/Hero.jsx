@@ -36,7 +36,7 @@ export default function Hero() {
                     ))
                 }
             </Swiper>
-            <div className="mt-10 w-full sm:w-[80%] mx-auto relative">
+            <div className="mt-10 w-full lg:w-[80%] mx-auto relative">
                 <Swiper
                     // install Swiper modules
                     modules={[A11y, Autoplay, Pagination, Navigation]}
@@ -52,6 +52,10 @@ export default function Hero() {
                         {
                             0: {
                                 slidesPerView: 1
+                            },
+                            640: {
+                                slidesPerView: 2,
+                                spaceBetween: 10
                             },
                             1200: {
                                 slidesPerView: 3
@@ -69,10 +73,10 @@ export default function Hero() {
                     }
                 </Swiper>
                 {/* Custom Navigation Buttons */}
-                <div className="swiper-button-prev-custom">
+                <div className="swiper-button-prev-custom left-[5%]">
                     <FontAwesomeIcon icon={faArrowLeft} />
                 </div>
-                <div className="swiper-button-next-custom">
+                <div className="swiper-button-next-custom right-[5%]">
                     <FontAwesomeIcon icon={faArrowRight} />
                 </div>
             </div>

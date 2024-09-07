@@ -17,6 +17,7 @@
 input[type='checkbox'] {
     height: 19px;
     width: 18px;
+    display: none;
     /* background-color: red; */
 
 }
