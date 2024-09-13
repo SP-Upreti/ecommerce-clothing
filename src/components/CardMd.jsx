@@ -1,21 +1,31 @@
 import { Link } from "react-router-dom"
 import "../App.css"
+import { FaStar } from "react-icons/fa"
 
-export default function CardMd({ id }) {
+export default function CardMd({ id, image, prevprice, price, name }) {
     return (
-        <div className="border w-[275px] overflow-hidden group cursor-pointer rounded-lg">
+        <div className="shadow hover:shadow-xl w-[230px] overflow-hidden group cursor-pointer rounded-sm">
             <div className="h-[160px] overflow-hidden">
-                <img src="/tractor.png" alt="" className="transition-all group-hover:scale-[1.4]" />
+                <img src={image} alt="" className="transition-all group-hover:scale-[1.15] aspect-[3/2] object-contain" />
             </div>
-            <div className="p-2">
-                <div className="mt-3">
-                    <h2 className="text-xl font-bold">Heavy electric tractor mahendra</h2>
-                    <p className="font-bold tracking-wider mt-3">Rs. 5500/-</p>
+            <div className="px-2">
+                <div className="my-2">
+                    <h2 className="text-lg font-semibold">{name}</h2>
+                    <p className="font-bold tracking-wider flex gap-5 items-center text-sm"><span className="text-gray-400"><strike>{prevprice}</strike></span> <span>{price}</span> </p>
                 </div>
-                <div className=" flex gap-4 items-center mt-4">
-                    <Link to={`/products/${id}`}><button className="bg-[--primary] border border-[--primary] text-white px-5 text-lg py-[4px] rounded-lg">Buy</button></Link>
-                    <Link to={'/products/1#prod'}><button className="border border-[--primary] text-[--primary] px-5 text-lg py-[4px] rounded-lg">more</button></Link>
+                <div className="flex gap-1 text-yellow-400  pb-1">
+                    {
+                        [...Array(5)].map(
+                            (data, key) => {
+                                return (
+                                    <span><FaStar /></span>
+                                )
+                            }
+                        )
+                    }
+
                 </div>
+                <p className="text-gray-500 mb-4">{id * 2 + (3)} reviews</p>
             </div>
         </div>
     )

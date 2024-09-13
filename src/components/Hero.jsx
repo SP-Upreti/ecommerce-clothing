@@ -16,7 +16,7 @@ import { faArrowLeft, faArrowRight } from '@fortawesome/free-solid-svg-icons';
 
 export default function Hero() {
     return (
-        <div className="py-5 sm:py-10">
+        <div className="">
             <Swiper
                 // install Swiper modules
                 modules={[A11y, Autoplay, Pagination]}
@@ -31,16 +31,19 @@ export default function Hero() {
                 {
                     salesItem.map((data, index) => (
                         <SwiperSlide key={index}>
-                            <CardLg img={data.image} title={data.name} features={data.features} />
+                            <CardLg img={`banner${index + 1}.png`} title={data.name} features={data.features} />
                         </SwiperSlide>
                     ))
                 }
             </Swiper>
-            <div className="mt-10 w-full lg:w-[80%] mx-auto relative">
+            <div className="w-[80%] mx-auto">
+                <h2 className='font-semibold text-2xl mt-4'>Categories</h2>
+            </div>
+            <div className=" w-full lg:w-[80%] mx-auto  relative">
                 <Swiper
                     // install Swiper modules
                     modules={[A11y, Autoplay, Pagination, Navigation]}
-                    spaceBetween={50}
+                    spaceBetween={5}
                     slidesPerView={3}
                     navigation={{
                         nextEl: '.swiper-button-next-custom',
@@ -58,7 +61,7 @@ export default function Hero() {
                                 spaceBetween: 10
                             },
                             1200: {
-                                slidesPerView: 3
+                                slidesPerView: 4
                             }
 
                         }

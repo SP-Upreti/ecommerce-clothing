@@ -57,6 +57,13 @@ code {
   /* Change this to the desired hover background */
 }
 
+.swiper-button-next-custom {
+  right: -5%;
+}
+.swiper-button-prev-custom {
+  left: -5%;
+}
+
 .swiper-button-prev-custom:hover,
 .swiper-button-next-custom:hover {
   background: var(--primary);

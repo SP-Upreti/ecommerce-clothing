@@ -50,33 +50,147 @@ export const salesItem = [
 
 export const categoriesData = [
     {
-        name: "Tractors",
-        availableItems: 5,
+        name: "Shoes",
+        availableItems: 50,
         priceRange: "$10,000 - $50,000",
-        photo: "/tractors-category.png"
+        photo: "/category/shoe.png"
     },
     {
-        name: "Grass Cutters",
-        availableItems: 3,
+        name: "T-shirt",
+        availableItems: 30,
         priceRange: "$200 - $1,500",
-        photo: "/grasscutters-category.png"
+        photo: "/category/shirt.png"
     },
     {
-        name: "Seed Planters",
-        availableItems: 4,
+        name: "Pant",
+        availableItems: 40,
         priceRange: "$2,000 - $15,000",
-        photo: "/seedplanters-category.png"
+        photo: "/category/pant.png"
     },
     {
-        name: "Ploughing Machines",
-        availableItems: 2,
+        name: "Jackets",
+        availableItems: 29,
         priceRange: "$5,000 - $20,000",
-        photo: "/ploughing-category.png"
+        photo: "/category/jacket.png"
     },
     {
-        name: "Planting Tools",
-        availableItems: 2,
+        name: "Formal",
+        availableItems: 29,
         priceRange: "$5,000 - $20,000",
-        photo: "/tools.png"
+        photo: "/category/formal.png"
+    },
+    {
+        name: "Casual",
+        availableItems: 29,
+        priceRange: "$5,000 - $20,000",
+        photo: "/category/casual.png"
+    },
+    {
+        name: "Accessories",
+        availableItems: 29,
+        priceRange: "$5,000 - $20,000",
+        photo: "/category/accessories.png"
+    },
+];
+
+
+export const products = [
+    {
+        name: "Nike Shoes",
+        availableItems: 50,
+        price: "$40,000",
+        prevPrice: "$50,000",
+        photo: "/category/shoe.png"
+    },
+    {
+        name: "Adidas T-shirt",
+        availableItems: 30,
+        price: "$1,200",
+        prevPrice: "$1,500",
+        photo: "/category/shirt.png"
+    },
+    {
+        name: "Levi's Pant",
+        availableItems: 40,
+        price: "$12,000",
+        prevPrice: "$15,000",
+        photo: "/category/pant.png"
+    },
+    {
+        name: "North Face Jacket",
+        availableItems: 29,
+        price: "$15,000",
+        prevPrice: "$20,000",
+        photo: "/category/jacket.png"
+    },
+    {
+        name: "Hugo Boss Formal",
+        availableItems: 29,
+        price: "$18,000",
+        prevPrice: "$20,000",
+        photo: "/category/formal.png"
+    },
+    {
+        name: "Tommy Hilfiger Casual",
+        availableItems: 29,
+        price: "$18,000",
+        prevPrice: "$20,000",
+        photo: "/category/casual.png"
+    },
+    {
+        name: "Naviforce Watch",
+        availableItems: 29,
+        price: "$18,000",
+        prevPrice: "$20,000",
+        photo: "/category/accessories.png"
+    },
+    {
+        name: "Nike Shoes",
+        availableItems: 50,
+        price: "$40,000",
+        prevPrice: "$50,000",
+        photo: "/category/shoe.png"
+    },
+    {
+        name: "Adidas T-shirt",
+        availableItems: 30,
+        price: "$1,200",
+        prevPrice: "$1,500",
+        photo: "/category/shirt.png"
+    },
+    {
+        name: "Levi's Pant",
+        availableItems: 40,
+        price: "$12,000",
+        prevPrice: "$15,000",
+        photo: "/category/pant.png"
+    },
+    {
+        name: "North Face Jacket",
+        availableItems: 29,
+        price: "$15,000",
+        prevPrice: "$20,000",
+        photo: "/category/jacket.png"
+    },
+    {
+        name: "Hugo Boss Formal",
+        availableItems: 29,
+        price: "$18,000",
+        prevPrice: "$20,000",
+        photo: "/category/formal.png"
+    },
+    {
+        name: "Tommy Hilfiger Casual",
+        availableItems: 29,
+        price: "$18,000",
+        prevPrice: "$20,000",
+        photo: "/category/casual.png"
+    },
+    {
+        name: "Naviforce Watch",
+        availableItems: 29,
+        price: "$18,000",
+        prevPrice: "$20,000",
+        photo: "/category/accessories.png"
     },
 ];

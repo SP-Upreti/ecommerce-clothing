@@ -2,7 +2,7 @@ import { FaDiscord, FaEnvelope, FaFacebook, FaInstagram, FaPaperPlane } from "re
 
 export default function Footer() {
     return (
-        <footer className="border-t border-slate-500 p-4 sm:p-10   overflow-hidden">
+        <footer className=" p-4 sm:p-10   overflow-hidden">
             <div className="flex justify-between gap-10 flex-wrap sm:w-[90%] mx-auto">
                 <div className="sm:w-[350px] flex flex-col gap-4">
                     <div className="">

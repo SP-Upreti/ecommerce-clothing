@@ -1,15 +1,16 @@
 import { Suspense } from 'react'
 import React from 'react'
+import { products } from '../Data/Global'
 
 const Card = React.lazy(() => import('./CardMd'))
 
 export default function Product() {
     return (
         <section className="w-[80%] mx-auto ">
-            <h2 className="text-2xl font-bold py-5">Available <span className="text-[--secondary]">Products</span></h2>
-            <div className="flex gap-8 flex-wrap ">
+            <h2 className="text-2xl font-bold py-5">Trending Products</h2>
+            <div className="flex gap-2 flex-wrap ">
                 {
-                    [...Array(12)].map(
+                    products.map(
                         (data, key) => {
                             return (
                                 <Suspense
@@ -30,7 +31,7 @@ export default function Product() {
 
                                     }
                                 >
-                                    <Card id={key} />
+                                    <Card image={data.photo} name={data.name} prevprice={data.prevPrice} price={data.price} id={key} />
                                 </Suspense>
                             )
                         }
