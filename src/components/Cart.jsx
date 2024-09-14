@@ -1,7 +1,7 @@
 export default function Cart() {
     return (
-        <div className="p-10">
-            <div className="flex gap-10">
+        <div className="p-4 sm:p-10">
+            <div className="flex gap-10 flex-wrap">
                 <div className="">
                     <table>
                         <thead>
@@ -19,13 +19,13 @@ export default function Cart() {
                                         return (
                                             <tr className="border-b-2 border-slate-300" key={key}>
                                                 <td className="p-2">
-                                                    <div className="flex gap-2 pe-4">
+                                                    <div className="flex gap-2 flex-wrap pe-4">
                                                         <div className="w-[136px] h-[119px] border rounded-sm">
-                                                            <img src="camera.png" alt="" />
+                                                            <img src="/category/shoe.png" alt="" />
                                                         </div>
                                                         <div className="">
-                                                            <h2 className="text-xl font-bold">Cannon Camera</h2>
-                                                            <p className="text-lg">Color: green</p>
+                                                            <h2 className="text-xl font-bold">Air Jordan</h2>
+                                                            <p className="text-lg">Color: white</p>
                                                             <p className="text-lg">size: xl</p>
                                                         </div>
                                                     </div>
@@ -56,7 +56,7 @@ export default function Cart() {
                     </div>
                 </div>
                 <div className="border-2 border-slate-400 h-fit">
-                    <div className="bg-[#E2F4FF]  font-bold min-w-[400px] p-2">
+                    <div className="bg-[#E2F4FF]  font-bold sm:min-w-[400px] p-2">
                         <h2 className="text-xl">Cart Total</h2>
 
                     </div>
