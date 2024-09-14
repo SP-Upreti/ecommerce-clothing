@@ -3,7 +3,7 @@ import { FaDiscord, FaEnvelope, FaFacebook, FaInstagram, FaPaperPlane } from "re
 export default function Footer() {
     return (
         <footer className=" p-4 sm:p-10   overflow-hidden">
-            <div className="flex justify-between gap-10 flex-wrap sm:w-[90%] mx-auto">
+            <div className="flex sm:justify-between gap-10 flex-wrap sm:w-[90%] mx-auto">
                 <div className="sm:w-[350px] flex flex-col gap-4">
                     <div className="">
                         <p className="text-2xl text-[--primary] font-bold font-[roboto]">FarmHub</p>
@@ -11,7 +11,7 @@ export default function Footer() {
                     <p className="text-slate-400">
                         Lorem ipsum dolor sit amet consectetur adipisng elit. Sed, minus! A similique obcaecati omnijhbhs consectetur et atque doloremque quo tempjhore dolorum, nam, aliquid vero repudiandae, culpuga amet eius ea provident.
                     </p>
-                    <div className="flex gap-5 items-center text-3xl mt-4 text-[--primary]">
+                    <div className="flex gap-5 items-center text-lg sm:text-3xl mt-4 text-[--primary]">
                         <span><FaFacebook /></span>
                         <span><FaInstagram /></span>
                         <span><FaEnvelope /></span>
