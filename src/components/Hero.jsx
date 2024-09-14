@@ -37,7 +37,7 @@ export default function Hero() {
                 }
             </Swiper>
             <div className="w-[80%] mx-auto">
-                <h2 className='font-semibold text-2xl mt-4'>Categories</h2>
+                <h2 className='font-semibold sm:text-2xl mt-4'>Categories</h2>
             </div>
             <div className=" w-full lg:w-[80%] mx-auto  relative">
                 <Swiper
@@ -76,10 +76,10 @@ export default function Hero() {
                     }
                 </Swiper>
                 {/* Custom Navigation Buttons */}
-                <div className="swiper-button-prev-custom left-[5%]">
+                <div className="swiper-button-prev-custom left-[4%] sm:left-[-5%]">
                     <FontAwesomeIcon icon={faArrowLeft} />
                 </div>
-                <div className="swiper-button-next-custom right-[5%]">
+                <div className="swiper-button-next-custom right-[4%] sm:right-[-5%]">
                     <FontAwesomeIcon icon={faArrowRight} />
                 </div>
             </div>

@@ -6,8 +6,8 @@ const Card = React.lazy(() => import('./CardMd'))
 
 export default function Product() {
     return (
-        <section className="w-[80%] mx-auto ">
-            <h2 className="text-2xl font-bold py-5">Trending Products</h2>
+        <section className="sm:w-[80%] mx-auto px-4 ">
+            <h2 className="text-lg sm:text-2xl font-bold py-5">Trending Products</h2>
             <div className="flex gap-2 flex-wrap ">
                 {
                     products.map(

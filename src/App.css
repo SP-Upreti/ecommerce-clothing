@@ -13,11 +13,15 @@
     color: var(--primary);
 }
 
+#checkbox {
+    display: none;
+}
+
 /* From Uiverse.io by Yaya12085 */
 input[type='checkbox'] {
     height: 19px;
     width: 18px;
-    display: none;
+    /* display: none; */
     /* background-color: red; */
 
 }

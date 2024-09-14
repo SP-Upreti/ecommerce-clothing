@@ -46,7 +46,7 @@ export default function NavBar() {
                                 <span>
                                     <FontAwesomeIcon icon={faBagShopping} />
                                 </span>
-                                <span>Products</span>
+                                <span>Category</span>
                             </Link>
                         </li>
                         <li className={`items ${activePath === "/about" ? "active" : "text-slate-600"} min-w-[140px] `}>
