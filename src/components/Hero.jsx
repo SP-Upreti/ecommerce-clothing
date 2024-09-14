@@ -2,7 +2,6 @@ import { A11y, Autoplay, Pagination, Navigation } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { salesItem, categoriesData } from '../Data/Global';
 
-
 // Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/navigation';
@@ -18,14 +17,10 @@ export default function Hero() {
     return (
         <div className="">
             <Swiper
-                // install Swiper modules
                 modules={[A11y, Autoplay, Pagination]}
                 spaceBetween={50}
                 slidesPerView={1}
                 loop={true}
-                className=''
-                // pagination={{ clickable: true }}
-
                 autoplay={{ delay: 3000 }}
             >
                 {
@@ -39,33 +34,26 @@ export default function Hero() {
             <div className="w-[80%] mx-auto">
                 <h2 className='font-semibold sm:text-2xl mt-4'>Categories</h2>
             </div>
-            <div className=" w-full lg:w-[80%] mx-auto  relative">
+            <div className="w-full lg:w-[80%] mx-auto relative">
                 <Swiper
-                    // install Swiper modules
                     modules={[A11y, Autoplay, Pagination, Navigation]}
                     spaceBetween={5}
                     slidesPerView={3}
-                    navigation={{
-                        nextEl: '.swiper-button-next-custom',
-                        prevEl: '.swiper-button-prev-custom'
-                    }}
                     loop={true}
                     autoplay={{ delay: 4000 }}
-                    breakpoints={
-                        {
-                            0: {
-                                slidesPerView: 1
-                            },
-                            640: {
-                                slidesPerView: 2,
-                                spaceBetween: 10
-                            },
-                            1200: {
-                                slidesPerView: 4
-                            }
-
-                        }
-                    }
+                    breakpoints={{
+                        0: {
+                            slidesPerView: 1,
+                            navigation: false, // Disable navigation for screens <= 640px
+                        },
+                        640: {
+                            slidesPerView: 2,
+                            spaceBetween: 10,
+                        },
+                        1200: {
+                            slidesPerView: 4,
+                        },
+                    }}
                 >
                     {
                         categoriesData.map((data, index) => (
@@ -75,13 +63,6 @@ export default function Hero() {
                         ))
                     }
                 </Swiper>
-                {/* Custom Navigation Buttons */}
-                <div className="swiper-button-prev-custom left-[4%] sm:left-[-5%]">
-                    <FontAwesomeIcon icon={faArrowLeft} />
-                </div>
-                <div className="swiper-button-next-custom right-[4%] sm:right-[-5%]">
-                    <FontAwesomeIcon icon={faArrowRight} />
-                </div>
             </div>
         </div>
     );
