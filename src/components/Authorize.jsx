@@ -27,13 +27,13 @@ export default function Authorize() {
     }, [user]);
 
     return (
-        <section className={`  z-[5] sm:p-5  h-screen `}>
+        <section className={`  z-[5] sm:p-5 flex justify-center items-center  h-screen `}>
 
-            <div className="mt-4 flex justify-center items-center w-screen sm:w-[98vw]  box-border ">
+            <div className=" flex justify-center items-center w-screen sm:w-[98vw]  box-border ">
 
                 {
                     login ? (
-                        <div className="sm:max-w-md relative flex flex-col p-4 rounded-md text-black bg-white border-2 sm:border-0 sm:w-[25vw] shadow-lg">
+                        <div className="sm:max-w-md relative flex flex-col p-4 rounded-md text-black bg-white border-2 sm:border-0 xl:w-[25vw] shadow-lg">
                             <div className="text-2xl font-bold mb-2 text-[#1e0e4b] text-center">
                                 Welcome back to <span className="text-[#7747ff]">App</span>
                             </div>
@@ -90,7 +90,7 @@ export default function Authorize() {
                             </div>
                         </div>
                     ) : (
-                        <div className="max-w-md relative flex flex-col p-4 rounded-md text-black bg-white w-[25vw] shadow-lg">
+                        <div className="max-w-md relative flex flex-col p-4 rounded-md text-black bg-white sm:w-[50vw] xl:w-[25vw] shadow-lg">
                             <div className="text-2xl font-bold mb-2 text-[#1e0e4b] text-center">
                                 Create new <span className="text-[#7747ff]">account</span>
                             </div>
