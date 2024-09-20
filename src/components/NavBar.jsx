@@ -22,7 +22,7 @@ export default function NavBar() {
     }, [location]);
 
     return (
-        <nav className={`border border-slate-300 p-3 lg:p-0  sm:px-12 flex ] justify-between  relative lg:h-auto  bg-[--primary   ${toggle ? 'h-screen items-start ' : 'h-auto items-center'}`}>
+        <nav className={`border border-slate-300 p-3 lg:py-0  sm:px-12 flex ] justify-between  relative lg:h-auto  bg-[--primary   ${toggle ? 'h-screen items-start ' : 'h-auto items-center'}`}>
             <div className="flex gap-[4rem] lg:items-center ">
 
                 <div className="logo">
