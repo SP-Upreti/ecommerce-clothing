@@ -10,6 +10,26 @@
 
 .active {
     font-weight: 700;
+
+}
+
+.active-link {
+    width: fit-content;
+    height: 60px;
+    padding: 0 10px;
+    transition: background-color 0.3s ease-in-out !important;
+}
+
+@media screen and (max-width: 1024px) {
+    .active-link {
+        width: 90vw !important;
+    }
+}
+
+.active .active-link {
+
+    background-color: #6c24a757;
+    border-bottom: 2px solid;
     color: var(--primary);
 }
 

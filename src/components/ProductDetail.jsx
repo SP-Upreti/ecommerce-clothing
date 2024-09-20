@@ -9,23 +9,23 @@ export default function Details() {
         window.scrollTo(0, 0);
     }, []);
     return (
-        <div className="p-10" id="prod">
-            <div className="flex gap-10">
+        <div className="p-4 sm:p-10" id="prod">
+            <div className="sm:flex gap-10">
                 <div className="">
-                    <div className="w-[650px] h-[550px]  border-2 rounded-md overflow-hidden">
-                        <img src="/camera.png" alt="" />
+                    <div className="sm:w-[650px] sm:h-[550px]  border-2 rounded-md overflow-hidden">
+                        <img src="/category/shoe.png" alt="" />
                     </div>
                     <div className="mt-8 flex justify-between">
-                        <div className="w-[300px] border h-[160px]">
-                            <img src="/camera.png" alt="" className="h-full mx-auto" />
+                        <div className="sm:w-[300px] border sm:h-[160px]">
+                            <img src="/category/shoe.png" alt="" className="h-full mx-auto" />
                         </div>
-                        <div className="w-[300px] border h-[160px]">
-                            <img src="/camera.png" alt="" className="h-full mx-auto" />
+                        <div className="sm:w-[300px] border sm:h-[160px]">
+                            <img src="/category/shoe.png" alt="" className="h-full mx-auto" />
                         </div>
                     </div>
                 </div>
                 <div className="flex flex-col gap-2 w-full">
-                    <h2 className="text-4xl font-bold">Cannon Camera</h2>
+                    <h2 className="text-4xl font-bold">Air Jordan e32</h2>
                     <p className="text-2xl font-bold font-[calibri]">$3499</p>
                     <div className="flex gap-1 items-center text-4xl text-yellow-500 mt-4">
                         <span><CiStar /></span>
