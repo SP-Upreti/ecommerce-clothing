@@ -6,7 +6,9 @@ export default function Footer() {
             <div className="flex sm:justify-between gap-10 flex-wrap sm:w-[90%] mx-auto">
                 <div className="sm:w-[350px] flex flex-col gap-2 sm:gap-4">
                     <div className="">
-                        <p className="text-lg sm:text-2xl text-[--primary] font-bold font-[roboto]">Ecommerce</p>
+                        <p className="text-lg sm:text-2xl text-[--primary] font-bold font-[roboto]">
+                            <img src="/fashionwear.svg" alt="" className="w-[150px]" />
+                        </p>
                     </div>
                     <p className="text-gray-500 text-sm sm:text-base">
                         Lorem ipsum dolor sit amet consectetur adipisng elit. Sed, minus! A similique obcaecati omnijhbhs consectetur et atque doloremque quo tempjhore dolorum, nam, aliquid vero repudiandae, culpuga amet eius ea provident.

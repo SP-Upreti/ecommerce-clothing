@@ -14,7 +14,7 @@ import Test from './pages/test';
 
 function Layout() {
   const location = useLocation();
-  const hideNavAndFooter = location.pathname === "/login";
+  const hideNavAndFooter = location.pathname === "/login" ;
 
   useEffect(() => {
     function setMetadata() {

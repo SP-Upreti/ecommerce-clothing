@@ -5,12 +5,8 @@ export default function CardSm({ title, image, price, items }) {
         w-[200px] h-[120px] border-2  border-gray-300
         overflow-hidden
         relative
-        bg-slate-200
-        
         "
         >
-
-            {/* h-[120px] */}
             <div className="w-[50%] overflow-hidden">
                 <img src={image} alt="" className="h-[100px]" />
             </div>

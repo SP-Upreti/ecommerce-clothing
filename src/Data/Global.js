@@ -38,10 +38,58 @@ export const salesItem = [
 
 export const categoriesData = [
     {
-        name: "Premium Shoes",
+        name: "Shoes",
         availableItems: 50,
         priceRange: "$10,000 - $50,000",
         photo: "/category/shoe.png"
+    },
+    {
+        name: "Cotton Tshirt",
+        availableItems: 30,
+        priceRange: "$200 - $1,500",
+        photo: "/category/shirt.png"
+    },
+    {
+        name: "Pants",
+        availableItems: 40,
+        priceRange: "$2,000 - $15,000",
+        photo: "/category/pant.png"
+    },
+    {
+        name: "Jackets",
+        availableItems: 29,
+        priceRange: "$5,000 - $20,000",
+        photo: "/category/jacket.png"
+    },
+    {
+        name: "Formals",
+        availableItems: 29,
+        priceRange: "$5,000 - $20,000",
+        photo: "/category/formal.png"
+    },
+    {
+        name: "Cotton Tshirt",
+        availableItems: 30,
+        priceRange: "$200 - $1,500",
+        photo: "/category/shirt.png"
+    },
+    {
+        name: "Pants",
+        availableItems: 40,
+        priceRange: "$2,000 - $15,000",
+        photo: "/category/pant.png"
+    },
+    {
+        name: "Casual",
+        availableItems: 29,
+        priceRange: "$5,000 - $20,000",
+        photo: "/category/casual.png"
+    },
+    {
+        name: "Accessories ",
+        availableItems: 29,
+        priceRange: "$5,000 - $20,000",
+        photo: "/category/accessories.png"
     },
     {
         name: "Cotton Tshirt",
@@ -54,31 +102,7 @@ export const categoriesData = [
         availableItems: 40,
         priceRange: "$2,000 - $15,000",
         photo: "/category/pant.png"
-    },
-    {
-        name: "Leather Jackets",
-        availableItems: 29,
-        priceRange: "$5,000 - $20,000",
-        photo: "/category/jacket.png"
-    },
-    {
-        name: "Formal Outfits",
-        availableItems: 29,
-        priceRange: "$5,000 - $20,000",
-        photo: "/category/formal.png"
-    },
-    {
-        name: "Casual Outfits",
-        availableItems: 29,
-        priceRange: "$5,000 - $20,000",
-        photo: "/category/casual.png"
-    },
-    {
-        name: "Accessories & Wears",
-        availableItems: 29,
-        priceRange: "$5,000 - $20,000",
-        photo: "/category/accessories.png"
-    },
+    }
 ];
 
 

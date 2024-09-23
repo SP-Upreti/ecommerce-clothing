@@ -40,8 +40,8 @@ export default function News() {
     return (
         <section className='py-10'>
             <div className="flex justify-between items-center w-[90%] mx-auto py-4">
-                <h2 className="text-2xl font-bold text-[#1B5A7D]">Latest News</h2>
-                <div className="text-[#1B5A7D] text-xl"><button>View all</button></div>
+                <h2 className="text-lg sm:text-2xl font-bold text-[#1B5A7D]">Latest News</h2>
+                <div className="text-[#1B5A7D] sm:text-xl"><button>View all</button></div>
             </div>
             <div className="flex gap-10 w-[90%] mx-auto">
                 <Swiper
@@ -62,9 +62,9 @@ export default function News() {
                     {
                         TestimonialData.map((data, index) => (
                             <SwiperSlide key={index}>
-                                <div className="border-2 border-slate-300  sm:p-4 rounded-xl m-1 flex flex-col sm:flex-row justify-between screen-1100:justify-center  sm:items-center gap-4 sm:gap-8">
+                                <div className="sm:border-2 border-slate-300  sm:p-4 rounded-xl m-1 flex flex-col sm:flex-row justify-between screen-1100:justify-center  sm:items-center gap-4 sm:gap-8">
                                     <div className="sm:w-[250px] xl:w-[320px]">
-                                        <img src="/blog1.png" alt="" />
+                                        <img src="/blog1.png" alt="" className='w-52 sm:w-auto' />
                                     </div>
                                     <div className="sm:w-[50%] p-2 sm:p-0">
                                         <h3 className='xl:text-xl'>jun 30 - 2024</h3>
