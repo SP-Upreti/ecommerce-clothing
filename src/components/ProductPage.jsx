@@ -1,9 +1,24 @@
-import { useState } from "react"
+// import { useState } from "react"
 import { FaStar } from "react-icons/fa";
 import { products, categoriesData } from '../Data/Global'
+import React, { Suspense, useContext, useState } from 'react';
+// import { products } from '../Data/Global';
+import { Link } from 'react-router-dom';
+import { StoreContext } from '../context/StoreContext';
+
+const Card = React.lazy(() => import('./CardMd'));
+
 
 export default function ProductPage() {
     const [toggle, setToggle] = useState(false);
+
+    const [visibleProducts, setVisibleProducts] = useState(10); // Initially display 20 products
+
+    const loadMore = () => {
+        setVisibleProducts((prevVisible) => prevVisible + 10); // Load 10 more products each click
+    };
+
+    const { products, DetailsIdUpdate, detailsId } = useContext(StoreContext);
 
     const fashionCategories = [
         {
@@ -147,43 +162,41 @@ export default function ProductPage() {
                             </div>
                         </div>
 
-                        <div className="grid grid-cols-1 gap-4 mt-8 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5">
-                            {
-                                products.map(
-                                    (data, key) => {
-                                        return (
-                                            <div className="shadow hover:shadow-xl w-[210px] overflow-hidden group cursor-pointer rounded-sm">
-                                                <div className="h-[160px] overflow-hidden">
-                                                    <img src={data.photo} alt="" className="transition-all group-hover:scale-[1.15] aspect-[3/2] object-contain" />
-                                                </div>
-                                                <div className="px-2">
-                                                    <div className="">
-                                                        <h2 className="text-lg font-semibold">{data.name}</h2>
-                                                        <p className="font-bold tracking-wider text  flex gap-4 items-center"> <strike className='text-slate-500'>{data.prevPrice}</strike> <span>{data.price}</span></p>
+                        <div className="">
+                            <div className="grid gap-2 grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 w-full">
+                                {
+                                    products.slice(0, visibleProducts).map(
+                                        (data, key) => {
+                                            return (
+                                                <Suspense key={key} fallback={
+                                                    <div className="flex flex-col bg-neutral-300 w-56 h-64 animate-pulse rounded-xl p-4 gap-4">
+                                                        <div className="bg-neutral-400/50 w-full h-32 animate-pulse rounded-md"></div>
+                                                        <div className="flex flex-col gap-2">
+                                                            <div className="bg-neutral-400/50 w-full h-4 animate-pulse rounded-md"></div>
+                                                            <div className="bg-neutral-400/50 w-4/5 h-4 animate-pulse rounded-md"></div>
+                                                            <div className="bg-neutral-400/50 w-full h-4 animate-pulse rounded-md"></div>
+                                                            <div className="bg-neutral-400/50 w-2/4 h-4 animate-pulse rounded-md"></div>
+                                                        </div>
                                                     </div>
-                                                    <div className="flex gap-1 text-yellow-400 my-2">
-                                                        {
-                                                            [...Array(5)].map(
-                                                                (data, key) => {
-                                                                    return (
-                                                                        <span><FaStar /></span>
-                                                                    )
-                                                                }
-                                                            )
-                                                        }
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        )
-                                    }
-                                )
-                            }
-
-
-
-
-
-
+                                                }>
+                                                    <Link to={"/products/detail"} onClick={() => { DetailsIdUpdate(data.id); console.log(detailsId); }}>
+                                                        <Card image={data.image} name={data.title} prevprice={data.prevPrice} price={data.price} id={data.id} ratings={data.rating.count} />
+                                                    </Link>
+                                                </Suspense>
+                                            );
+                                        }
+                                    )
+                                }
+                            </div >
+                            <div className="sm:text-center">
+                                {visibleProducts < products.length && (
+                                    <button
+                                        className='bg-[--primary] sm:text-lg px-4 py-1 rounded-md mt-6 sm:my-6 text-white'
+                                        onClick={loadMore}>
+                                        Load more
+                                    </button>
+                                )}
+                            </div>
                         </div>
                     </div>
                 </div>
