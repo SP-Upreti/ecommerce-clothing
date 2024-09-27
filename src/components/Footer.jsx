@@ -22,7 +22,7 @@ export default function Footer() {
                 </div>
                 <div className="flex flex-col gap-2 sm:gap-4">
                     <h2 className="sm:text-xl font-bold ">Subscribe us</h2>
-                    <div className="flex items-center flex-wrap bg-[--primary]  text-xl sm:rounded-sm overflow-hidden w-fit border">
+                    <div className="flex items-center  bg-[--primary]  text-xl sm:rounded-sm overflow-hidden w-fit border">
                         <input type="email" name="" id="" placeholder="example@gmail.com" className=" py-1 text-black px-2" />
                         <div className="px-3 text-white w-fit ">
                             <FaPaperPlane />
