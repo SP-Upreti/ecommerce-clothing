@@ -180,7 +180,7 @@ export default function ProductPage() {
                                                     </div>
                                                 }>
                                                     <Link to={"/products/detail"} onClick={() => { DetailsIdUpdate(data.id); console.log(detailsId); }}>
-                                                        <Card image={data.image} name={data.title} prevprice={data.prevPrice} price={data.price} id={data.id} ratings={data.rating.count} />
+                                                        <Card image={data.image} name={data.title.slice(0, 20) + "..."} prevprice={data.prevPrice} price={data.price} id={data.id} ratings={data.rating.count} />
                                                     </Link>
                                                 </Suspense>
                                             );

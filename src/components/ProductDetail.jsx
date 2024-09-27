@@ -35,7 +35,7 @@ export default function Details() {
                         <img src={detail.image} alt="" className="h-[90%]" />
                     </div>
                 </div>
-                <div className="flex flex-col gap-2 w-max mt-6 md:mt-0 ">
+                <div className="flex flex-col gap-2 sm:w-max mt-6 md:mt-0 ">
                     <h2 className="text-xl sm:text-4xl font-bold">{detail.title}</h2>
                     <p className="text-2xl font-bold font-[calibri]">$ {detail.price}</p>
                     <div className="flex gap-1 items-center sm:text-4xl text-yellow-500 sm:mt-4">
@@ -52,7 +52,7 @@ export default function Details() {
                     </p>
                     <p className="text-slate-500 ">{detail.description}</p>
                     <div className="border-2  my-2 mt-"></div>
-                    <div className="flex gap-5 items-center">
+                    {/* <div className="flex gap-5 items-center">
                         <p className="sm:text-2xl font-semibold  sm:min-w-[110px]">Color: </p>
                         <div className="flex gap-2 items-center">
                             <p className="flex">
@@ -62,13 +62,13 @@ export default function Details() {
                                 <span className="h-[20px] w-[20px] rounded-full bg-red-500"></span>
                             </p>
                         </div>
-                    </div>
+                    </div> */}
                     <div className="flex gap-5 items-center">
                         <p className="sm:text-2xl font-semibold sm:min-w-[110px]">Size: </p>
                         <div className="flex gap-2 items-center text-lg font-bold">
-                            <button className="border w-[40px] bg-blue-500 text-white">sm</button>
-                            <button className="border w-[40px]">md</button>
-                            <button className="border w-[40px]">xl</button>
+                            <button className="border w-[40px]  hover:bg-blue-500 hover:text-white">sm</button>
+                            <button className="border w-[40px] hover:bg-blue-500 hover:text-white">md</button>
+                            <button className="border w-[40px] hover:bg-blue-500 hover:text-white">xl</button>
                         </div>
                     </div>
                     <div className="flex gap-5 items-center">

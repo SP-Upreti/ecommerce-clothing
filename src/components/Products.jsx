@@ -19,7 +19,7 @@ export default function Product() {
     return (
         <section className="w-full md:w-[90%] mx-auto px-4" id='products'>
             <h2 className="text-xl sm:text-2xl font-bold pb-5 sm:py-5">Trending Products</h2>
-            <div className="grid gap-2 grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 w-full">
+            <div className="grid gap-2 grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 w-full ">
                 {
                     products.slice(0, visibleProducts).map(
                         (data, key) => {
@@ -36,7 +36,7 @@ export default function Product() {
                                     </div>
                                 }>
                                     <Link to={"/products/detail"} onClick={() => { DetailsIdUpdate(data.id); console.log(detailsId); }}>
-                                        <Card image={data.image} name={data.title} prevprice={data.prevPrice} price={data.price} id={data.id} ratings={data.rating.count} />
+                                        <Card image={data.image} name={data.title.slice(0, 20) + "..."} prevprice={data.prevPrice} price={data.price} id={data.id} ratings={data.rating.count} />
                                     </Link>
                                 </Suspense>
                             );

@@ -31,7 +31,7 @@ export default function NavBar() {
                     </form>
                 </div>
                 <div className="text-3xl text-[#0c4760] cursor-pointer hover:text-[#3055cf]">
-                    <span><FaShoppingCart /></span>
+                    <Link to={'/cart'}><span><FaShoppingCart /></span></Link>
                 </div>
             </div>
         </nav >

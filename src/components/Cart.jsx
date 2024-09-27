@@ -6,10 +6,10 @@ export default function Cart() {
                     <table>
                         <thead>
                             <tr className="bg-[#E2F4FF] ">
-                                <th className="min-w-[150px] p-2 text-left">Product</th>
-                                <th className="min-w-[150px] p-2 text-left">Price</th>
-                                <th className="min-w-[150px] p-2 text-left">Quantity</th>
-                                <th className="min-w-[150px] p-2 text-left">Subtotal</th>
+                                <th className="sm:min-w-[150px] p-2 text-left">Product</th>
+                                <th className="sm:min-w-[150px] p-2 text-left">Price</th>
+                                <th className="sm:min-w-[150px] p-2 text-left">Quantity</th>
+                                <th className="sm:min-w-[150px] p-2 text-left">Subtotal</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -20,7 +20,7 @@ export default function Cart() {
                                             <tr className="border-b-2 border-slate-300" key={key}>
                                                 <td className="p-2">
                                                     <div className="flex gap-2 flex-wrap pe-4">
-                                                        <div className="w-[136px] h-[119px] border rounded-sm">
+                                                        <div className="sm:w-[136px] sm:h-[119px] border rounded-sm">
                                                             <img src="/category/shoe.png" alt="" />
                                                         </div>
                                                         <div className="">
