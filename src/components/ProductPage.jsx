@@ -1,6 +1,6 @@
 import { useState } from "react"
 import { FaStar } from "react-icons/fa";
-import { products } from '../Data/Global'
+import { products, categoriesData } from '../Data/Global'
 
 export default function ProductPage() {
     const [toggle, setToggle] = useState(false);
@@ -91,8 +91,8 @@ export default function ProductPage() {
             <div className=" w-[95%] px-6 py-8 mx-auto">
                 <div className="lg:flex lg:-mx-2">
                     <div className="block xl:hidden">
-                        <input id="checkbox" type="checkbox" />
-                        <label className="toggle" for="checkbox" onClick={() => { setToggle(!toggle) }}>
+                        <input id="checkbox" type="checkbox" className="group" />
+                        <label className="toggle " for="checkbox" onClick={() => { setToggle(!toggle) }}>
                             <div id="bar1" className="bars"></div>
                             <div id="bar2" className="bars"></div>
                             <div id="bar3" className="bars"></div>
@@ -109,7 +109,7 @@ export default function ProductPage() {
                         <a href="#" className="hover:text-[--primary] cursor-pointer text-xl   flex items-center gap-3 products"><span><input type="checkbox" className="cursor-pointer" name="" id="item8" /></span><span><label className="cursor-pointer" htmlFor="item8" >Shorts</label></span></a>
                         <a href="#" className="hover:text-[--primary] cursor-pointer text-xl   flex items-center gap-3 products"><span><input type="checkbox" className="cursor-pointer" name="" id="item9" /></span><span><label className="cursor-pointer" htmlFor="item9" >Underwear</label></span></a> */}
                         {
-                            fashionCategories.map(
+                            categoriesData.map(
                                 (data, key) => {
                                     // console.log(data.subcategories[1])
                                     return (
@@ -120,7 +120,7 @@ export default function ProductPage() {
                                                     <svg fill="red" width="10px" height="10px">
                                                     </svg>
                                                 </span>
-                                                <span className="">{data.name}</span>
+                                                <span className="" id="name">{data.name}</span>
                                             </label>
                                             <svg class="inline-svg">
                                                 <symbol id="check-4" viewBox="0 0 12 10">

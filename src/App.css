@@ -107,6 +107,13 @@ input[type='checkbox'] {
     transform: rotate(180deg);
 }
 
+#checkbox:checked+.toggle {
+    transition-duration: .5s;
+    transform: rotate(180deg);
+
+}
+
+
 
 /* From Uiverse.io by Shoh2008 */
 .checkbox-wrapper-4 * {
@@ -139,6 +146,7 @@ input[type='checkbox'] {
     float: left;
     vertical-align: middle;
     transform: translate3d(0, 0, 0);
+    font-size: 1.3rem;
 }
 
 .checkbox-wrapper-4 .cbx span:first-child {
