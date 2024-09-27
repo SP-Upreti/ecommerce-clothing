@@ -31,7 +31,7 @@ export default function Hero() {
                 <div className="h-fit  screen-920:h-[400px] overflow-hidden">
                     <div className="flex flex-col">
                         <div className="">
-                            <img src="./OIP2.JPG" alt="" />
+                            <img src="./OIP2.jpg" alt="" />
                         </div>
                     </div>
                 </div>
