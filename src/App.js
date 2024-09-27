@@ -10,11 +10,12 @@ import Contact from './components/Contact';
 import { MetaData } from './Data/Global';
 import ProductPage from './components/ProductPage';
 import Test from './pages/test';
+import { Store } from './context/Contexts';
 
 
 function Layout() {
   const location = useLocation();
-  const hideNavAndFooter = location.pathname === "/login" ;
+  const hideNavAndFooter = location.pathname === "/login";
 
   useEffect(() => {
     function setMetadata() {
@@ -63,7 +64,9 @@ function Layout() {
 export default function App() {
   return (
     <BrowserRouter>
-      <Layout />
+      <Store>
+        <Layout />
+      </Store>
     </BrowserRouter>
   );
 }

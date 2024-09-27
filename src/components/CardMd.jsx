@@ -2,7 +2,7 @@ import { Link } from "react-router-dom"
 import "../App.css"
 import { FaStar } from "react-icons/fa"
 
-export default function CardMd({ id, image, prevprice, price, name }) {
+export default function CardMd({ id, image, prevprice, price, name, ratings }) {
     return (
         <div className="shadow hover:shadow-xl  group cursor-pointer rounded-sm ">
             <div className="w-[80%] sm:h-[160px]  flex justify-center items-center mx-auto">
@@ -18,14 +18,14 @@ export default function CardMd({ id, image, prevprice, price, name }) {
                         [...Array(5)].map(
                             (data, key) => {
                                 return (
-                                    <span><FaStar /></span>
+                                    <span key={key}><FaStar /></span>
                                 )
                             }
                         )
                     }
 
                 </div>
-                <p className="text-gray-500 pb-2">{id * 2 + (3)} reviews</p>
+                <p className="text-gray-500 pb-2">{"("} {ratings} ratings {")"}</p>
             </div>
         </div>
     )
