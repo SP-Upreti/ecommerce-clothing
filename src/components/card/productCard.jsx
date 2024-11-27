@@ -19,7 +19,7 @@ export default function ProductCard() {
                                                 width="24"
                                                 height="24"
                                                 fill={"yellow"} // Gold for filled, light gray for empty
-                                                stroke="yellow"
+                                                stroke="black"
                                                 strokeWidth="1"
                                             >
                                                 <path
