@@ -18,8 +18,8 @@ export default function ProductCard() {
                                                 viewBox="0 0 24 24"
                                                 width="24"
                                                 height="24"
-                                                fill={"yellow"} // Gold for filled, light gray for empty
-                                                stroke="black"
+                                                fill={"#FE9900"} // Gold for filled, light gray for empty
+                                                stroke=""
                                                 strokeWidth="1"
                                             >
                                                 <path
@@ -34,7 +34,7 @@ export default function ProductCard() {
                     </p>
                 </div>
                 <div className="absolute top-2 right-2 py-2 px-4 bg-white rounded-lg">
-                    <span className="text-md font-semibold">$150</span>
+                    <span className="text-md font-semibold text-orange-500">$150</span>
                 </div>
             </div>
         </div>

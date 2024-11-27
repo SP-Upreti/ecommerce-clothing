@@ -91,21 +91,21 @@ export default function Navbar() {
                     <li className='max-lg:border-b max-lg:py-3 px-3'><a href='javascript:void(0)'
                         className='hover:text-yellow-300 text-yellow-300 text-[15px] font-medium block'>New</a></li>
                     <li className='max-lg:border-b max-lg:py-3 px-3'><a href='javascript:void(0)'
-                        className='hover:text-yellow-300 text-white text-[15px] font-medium block'>Brands</a></li>
+                        className='hover:text-yellow-300 text-white text-[15px] font-medium block'>Electronics</a></li>
                     <li className='max-lg:border-b max-lg:py-3 px-3'><a href='javascript:void(0)'
-                        className='hover:text-yellow-300 text-white text-[15px] font-medium block'>Makeup</a></li>
+                        className='hover:text-yellow-300 text-white text-[15px] font-medium block'>Fashion</a></li>
                     <li className='max-lg:border-b max-lg:py-3 px-3'><a href='javascript:void(0)'
-                        className='hover:text-yellow-300 text-white text-[15px] font-medium block'>Hair</a></li>
+                        className='hover:text-yellow-300 text-white text-[15px] font-medium block'>Kitchen Utils</a></li>
                     <li className='max-lg:border-b max-lg:py-3 px-3'><a href='javascript:void(0)'
-                        className='hover:text-yellow-300 text-white text-[15px] font-medium block'>Tools & Brushes</a></li>
+                        className='hover:text-yellow-300 text-white text-[15px] font-medium block'>Beauty</a></li>
                     <li className='max-lg:border-b max-lg:py-3 px-3'><a href='javascript:void(0)'
-                        className='hover:text-yellow-300 text-white text-[15px] font-medium block'>Bath & body</a></li>
+                        className='hover:text-yellow-300 text-white text-[15px] font-medium block'> Sports & Outdoors</a></li>
                     <li className='max-lg:border-b max-lg:py-3 px-3'><a href='javascript:void(0)'
-                        className='hover:text-yellow-300 text-white text-[15px] font-medium block'>Clean Body</a></li>
+                        className='hover:text-yellow-300 text-white text-[15px] font-medium block'>Baby Products</a></li>
                     <li className='max-lg:border-b max-lg:py-3 px-3'><a href='javascript:void(0)'
-                        className='hover:text-yellow-300 text-white text-[15px] font-medium block'>Gifts</a></li>
+                        className='hover:text-yellow-300 text-white text-[15px] font-medium block'>Entertainment</a></li>
                     <li className='max-lg:border-b max-lg:py-3 px-3'><a href='javascript:void(0)'
-                        className='hover:text-yellow-300 text-white text-[15px] font-medium block'>Skincare</a></li>
+                        className='hover:text-yellow-300 text-white text-[15px] font-medium block'>Groceries</a></li>
                 </ul>
             </div>
         </header>

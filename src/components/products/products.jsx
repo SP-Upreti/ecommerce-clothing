@@ -7,9 +7,9 @@ export default function Products() {
             <div className="py-4 text-3xl font-semibold">
                 <h2>Popular Items</h2>
             </div>
-            <div className=' grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4'>
+            <div className=' grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-2'>
                 {
-                    [...Array(16)].map(
+                    [...Array(15)].map(
                         (data, key) => {
                             return (
                                 <ProductCard key={key} />
