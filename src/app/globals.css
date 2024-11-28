@@ -1,3 +1,10 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+.svg-icon path,
+.svg-icon polygon,
+.svg-icon rect {
+    fill: currentColor !important;
+}
