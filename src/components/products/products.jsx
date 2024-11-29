@@ -3,7 +3,7 @@ import ProductCard from '../card/productCard'
 
 export default function Products() {
     return (
-        <div className="w-[90%] mx-auto  px-4 py-8 sm:py-16 sm:px-6 lg:px-8">
+        <div className="w-[90%] mx-auto  px-4 py-8 sm:py-10 sm:px-6 lg:px-8">
             <div className="py-4 text-3xl font-semibold">
                 <h2>Popular Items</h2>
             </div>

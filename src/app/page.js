@@ -7,6 +7,7 @@ import Sale from "@/components/sale/sale";
 import Test from "@/components/test/Test";
 import Testimonial from "@/components/testimonial/testimonial";
 import Category from "@/components/category/Category";
+import News from "@/components/news/news";
 
 export default function Home() {
   return (
@@ -15,9 +16,10 @@ export default function Home() {
       <Hero />
       <Products />
       <Category />
+      <Sale />
       <Test />
-      {/* <Sale /> */}
       <Testimonial />
+      <News />
       <Footer />
     </div>
   );

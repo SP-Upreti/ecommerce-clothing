@@ -8,3 +8,33 @@
 .svg-icon rect {
     fill: currentColor !important;
 }
+
+
+/* Custom Pagination Container */
+.custom-pagination {
+    display: flex;
+    align-items: center;
+    padding-left: 4rem;
+    position: relative;
+    bottom: 20px; /* Adjust position */
+    margin-top: 10px; /* Add some spacing from Swiper */
+}
+
+/* Pagination Bullets */
+.custom-pagination .swiper-pagination-bullet {
+    width: 15px;
+    height: 15px;
+    background-color: transparent;
+    border: 2px solid gray;
+    border-radius: 50%;
+    margin: 0 5px; /* Spacing between bullets */
+    opacity: 1; /* Make bullets always visible */
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+/* Active Bullet */
+.custom-pagination .swiper-pagination-bullet-active {
+    border: 2px solid #f59e0b;
+    background-color: #f59e0b; /* Darker yellow for active */
+    transform: scale(1.2); /* Enlarge active bullet */
+}

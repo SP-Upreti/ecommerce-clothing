@@ -46,7 +46,7 @@ const Testimonial = () => {
     ];
 
     return (
-        <section className="pt-14">
+        <section className="pt-10">
             <div className="max-w-screen-xl mx-auto px-4 md:px-8">
                 <div className="max-w-2xl sm:text-center md:mx-auto">
                     <h3 className="text-gray-800 text-3xl font-semibold sm:text-4xl">
