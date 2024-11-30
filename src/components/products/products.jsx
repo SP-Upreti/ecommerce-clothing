@@ -1,8 +1,12 @@
-import React from 'react'
+"use client"
+import React, { useContext } from 'react'
 import ProductCard from '../card/productCard'
 import Link from 'next/link'
+import { AppContext } from '@/context/appContext'
 
 export default function Products() {
+
+    const { products } = useContext(AppContext)
     return (
         <div className="w-[90%] mx-auto  px-4 py-8 sm:py-10 sm:px-6 lg:px-8">
             <div className="py-4 text-3xl font-semibold">
@@ -10,10 +14,10 @@ export default function Products() {
             </div>
             <div className=' grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-2'>
                 {
-                    [...Array(10)].map(
+                    products.products?.map(
                         (data, key) => {
                             return (
-                                <ProductCard key={key} />
+                                <ProductCard data={data} key={key} />
                             )
                         }
                     )
