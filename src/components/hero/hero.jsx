@@ -96,7 +96,7 @@ export default function Hero() {
                     >
                         {testimonials.map((item, idx) => (
                             <SwiperSlide key={idx} className="pb-4">
-                                <div className="flex justify-between flex-col md:flex-row ">
+                                <div className="flex justify-between flex-col-reverse md:flex-row ">
                                     <div className="flex flex-col gap-4">
                                         <h2 className="text-5xl font-bold max-w-[5rem] leading-[50px] text-teal-800">Cannon Camera</h2>
                                         <p className="hidden sm:block w-1/2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum sunt voluptatum cumque voluptatem totam cupiditate minus, magnam quaerat velit iusto?</p>
