@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import React from 'react'
 
 export default function Navbar() {
@@ -5,9 +6,10 @@ export default function Navbar() {
         <header className='shadow-md font-[sans-serif] tracking-wide relative z-50'>
             <section
                 className='md:flex lg:items-center relative py-3 lg:px-10 px-4 border-gray-200 border-b bg-white lg:min-h-[80px] max-lg:min-h-[60px]'>
-                <a href="javascript:void(0)" className="max-sm:w-full max-sm:mb-3 shrink-0"><img
-                    src="/logo.svg" alt="logo" className='w-[160px]' />
-                </a>
+                <Link className="max-sm:w-full max-sm:mb-3 shrink-0" href={"/"}>
+                    <img
+                        src="/logo.svg" alt="logo" className='w-[160px]' />
+                </Link>
 
                 <div className='flex flex-wrap w-full items-center'>
                     <input type='text' placeholder='Search something...'
@@ -85,26 +87,26 @@ export default function Navbar() {
                 <ul
                     className='lg:flex lg:flex-wrap lg:items-center lg:justify-center px-10 py-3 bg-[#333] min-h-[46px] gap-4 max-lg:space-y-4 max-lg:fixed max-lg:w-1/2 max-lg:min-w-[300px] max-lg:top-0 max-lg:left-0 max-lg:p-6 max-lg:h-full max-lg:shadow-md max-lg:overflow-auto z-50'>
                     <li className='mb-6 hidden max-lg:block'>
-                        <a href="javascript:void(0)"><img src="https://readymadeui.com/readymadeui-white.svg" alt="logo" className='w-36' />
+                        <a href="#"><img src="https://readymadeui.com/readymadeui-white.svg" alt="logo" className='w-36' />
                         </a>
                     </li>
-                    <li className='max-lg:border-b max-lg:py-3 px-3'><a href='javascript:void(0)'
+                    <li className='max-lg:border-b max-lg:py-3 px-3'><a href='#'
                         className='hover:text-yellow-300 text-yellow-300 text-[15px] font-medium block'>New</a></li>
-                    <li className='max-lg:border-b max-lg:py-3 px-3'><a href='javascript:void(0)'
+                    <li className='max-lg:border-b max-lg:py-3 px-3'><a href='#'
                         className='hover:text-yellow-300 text-white text-[15px] font-medium block'>Electronics</a></li>
-                    <li className='max-lg:border-b max-lg:py-3 px-3'><a href='javascript:void(0)'
+                    <li className='max-lg:border-b max-lg:py-3 px-3'><a href='#'
                         className='hover:text-yellow-300 text-white text-[15px] font-medium block'>Fashion</a></li>
-                    <li className='max-lg:border-b max-lg:py-3 px-3'><a href='javascript:void(0)'
+                    <li className='max-lg:border-b max-lg:py-3 px-3'><a href='#'
                         className='hover:text-yellow-300 text-white text-[15px] font-medium block'>Kitchen Utils</a></li>
-                    <li className='max-lg:border-b max-lg:py-3 px-3'><a href='javascript:void(0)'
+                    <li className='max-lg:border-b max-lg:py-3 px-3'><a href='#'
                         className='hover:text-yellow-300 text-white text-[15px] font-medium block'>Beauty</a></li>
-                    <li className='max-lg:border-b max-lg:py-3 px-3'><a href='javascript:void(0)'
+                    <li className='max-lg:border-b max-lg:py-3 px-3'><a href='#'
                         className='hover:text-yellow-300 text-white text-[15px] font-medium block'> Sports & Outdoors</a></li>
-                    <li className='max-lg:border-b max-lg:py-3 px-3'><a href='javascript:void(0)'
+                    <li className='max-lg:border-b max-lg:py-3 px-3'><a href='#'
                         className='hover:text-yellow-300 text-white text-[15px] font-medium block'>Baby Products</a></li>
-                    <li className='max-lg:border-b max-lg:py-3 px-3'><a href='javascript:void(0)'
+                    <li className='max-lg:border-b max-lg:py-3 px-3'><a href='#'
                         className='hover:text-yellow-300 text-white text-[15px] font-medium block'>Entertainment</a></li>
-                    <li className='max-lg:border-b max-lg:py-3 px-3'><a href='javascript:void(0)'
+                    <li className='max-lg:border-b max-lg:py-3 px-3'><a href='#'
                         className='hover:text-yellow-300 text-white text-[15px] font-medium block'>Groceries</a></li>
                 </ul>
             </div>

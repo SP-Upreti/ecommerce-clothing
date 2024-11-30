@@ -78,8 +78,8 @@ export default function Category() {
                         }}
                     >
                         {[...Array(3)].map((item, idx) => (
-                            <SwiperSlide key={idx} className="pb-4">
-                                <div className="  p-10 grid grid-cols-2 items-center">
+                            <SwiperSlide key={idx} className="py-10">
+                                <div className="  px-10 grid grid-cols-2 items-center">
                                     <div className="">
                                         <Image src={"/speaker.png"} alt="okay" height={100} width={400} />
                                     </div>

@@ -1,5 +1,6 @@
 import React from 'react'
 import ProductCard from '../card/productCard'
+import Link from 'next/link'
 
 export default function Products() {
     return (
@@ -19,10 +20,14 @@ export default function Products() {
                 }
             </div>
             <div className="flex flex-col items-center md:flex-row my-8">
-                <a
-                    href="/"
+
+                <Link href={"/products"}
                     className="inline-flex items-center justify-center w-full h-12 px-6 mb-3 font-medium tracking-wide text-white transition duration-200 rounded shadow-md md:w-auto md:mr-4 md:mb-0 bg-purple-500 hover:bg-deep-purple-accent-700 focus:shadow-outline focus:outline-none"
                 >
+                    {/* <a
+                    href="/"
+                    className="inline-flex items-center justify-center w-full h-12 px-6 mb-3 font-medium tracking-wide text-white transition duration-200 rounded shadow-md md:w-auto md:mr-4 md:mb-0 bg-purple-500 hover:bg-deep-purple-accent-700 focus:shadow-outline focus:outline-none"
+                > */}
                     <span className="mr-3">Browse More</span>
                     <svg
                         width="24"
@@ -64,7 +69,8 @@ export default function Products() {
                             points="1,1 4,4 4,14 2,18 23,18 "
                         />
                     </svg>
-                </a>
+                    {/* </a> */}
+                </Link>
             </div>
         </div>
     )
