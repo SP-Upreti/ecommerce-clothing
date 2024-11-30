@@ -1,5 +1,6 @@
 // "use client"
 import Filtre from '@/components/filtre/Filtre'
+import Footer from '@/components/footer/footer'
 import Navbar from '@/components/navbar/Navbar'
 import ProductList from '@/components/products/ProductList'
 import Products from '@/components/products/products'
@@ -12,6 +13,7 @@ export default function page() {
             <Filtre>
                 <ProductList />
             </Filtre>
+            <Footer />
         </div>
     )
 }

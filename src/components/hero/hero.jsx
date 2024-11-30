@@ -96,10 +96,10 @@ export default function Hero() {
                     >
                         {testimonials.map((item, idx) => (
                             <SwiperSlide key={idx} className="pb-4">
-                                <div className="flex justify-between ">
+                                <div className="flex justify-between flex-col md:flex-row ">
                                     <div className="flex flex-col gap-4">
                                         <h2 className="text-5xl font-bold max-w-[5rem] leading-[50px] text-teal-800">Cannon Camera</h2>
-                                        <p className="w-1/2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum sunt voluptatum cumque voluptatem totam cupiditate minus, magnam quaerat velit iusto?</p>
+                                        <p className="hidden sm:block w-1/2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum sunt voluptatum cumque voluptatem totam cupiditate minus, magnam quaerat velit iusto?</p>
                                         <div className="flex gap-8 items-center">
                                             <button className="bg-yellow-500 border-2 border-yellow-500 text-white px-8 rounded-lg py-3 capitalize font-semibold">shop now</button>
                                             <button className="border-2 border-purple-500 text-purple-600 px-8 rounded-lg py-3 capitalize font-semibold">view more</button>
@@ -128,6 +128,17 @@ export default function Hero() {
                                 prevEl: ".prev-el",
                             }
                         }
+                        breakpoints={{
+                            0: {
+                                slidesPerView: 1
+                            },
+                            768: {
+                                slidesPerView: 2
+                            },
+                            1000: {
+                                slidesPerView: 3
+                            }
+                        }}
                     >
                         {categories.map((item, idx) => (
                             <SwiperSlide key={idx} className="">

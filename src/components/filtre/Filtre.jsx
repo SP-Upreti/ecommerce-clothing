@@ -8,7 +8,7 @@ export default function Filtre({ children }) {
                     <div className="fixed inset-0 flex z-40 lg:hidden " role="dialog" aria-modal="true">
                         <div className="fixed inset-0 bg-black bg-opacity-25" aria-hidden="true"></div>
 
-                        <div className="ml-auto relative   h-full   shadow-xl py-4 pb-12 flex flex-col overflow-y-auto">
+                        <div className="ml-auto relative    h-full   shadow-xl py-4 pb-12 flex flex-col overflow-y-auto">
                             <div className="px-4 flex items-center justify-between">
                                 <h2 className="text-lg font-medium text-gray-900">Filters</h2>
                                 <button type="button" className="-mr-2 w-10 h-10 bg-white p-2 rounded-md flex items-center justify-center text-gray-400">
@@ -21,7 +21,7 @@ export default function Filtre({ children }) {
                             </div>
 
                             {/* Filters */}
-                            <div className="mt-4 border-t border-gray-200">
+                            <div className="mt-4 border-t sm:hidden border-gray-200">
                                 <h3 className="sr-only">Categories</h3>
                                 <ul role="list" className="font-medium text-gray-900 px-2 py-3">
                                     <li>
@@ -45,10 +45,10 @@ export default function Filtre({ children }) {
                                     </li>
                                 </ul>
 
-                                <div className="border-t border-gray-200 px-4 py-6">
+                                <div className="border-t border-gray-200 px-4 py-6  ">
                                     <h3 className="-mx-2 -my-3 flow-root">
                                         {/* Expand/collapse section button */}
-                                        <button type="button" className="px-2 py-3 bg-white w-full flex items-center justify-between text-gray-400 hover:text-gray-500" aria-controls="filter-section-mobile-0" aria-expanded="false">
+                                        <button type="button" className="px-2 py-3  w-full flex items-center justify-between text-gray-400 hover:text-gray-500" aria-controls="filter-section-mobile-0" aria-expanded="false">
                                             <span className="font-medium text-gray-900"> Color </span>
                                             <span className="ml-6 flex items-center">
                                                 {/*
@@ -274,10 +274,10 @@ export default function Filtre({ children }) {
                             </div>
                         </div>
 
-                        <section aria-labelledby="products-heading" className="pt-6 pb-24">
+                        <section aria-labelledby="products-heading" className="pt-6 pb-10">
                             <h2 id="products-heading" className="sr-only">Products</h2>
 
-                            <div className="grid grid-cols-1 lg:grid-cols-4 gap-x-8 gap-y-10">
+                            <div className="grid grid-cols-1 lg:grid-cols-6 gap-x-8 gap-y-10">
                                 {/* Filters */}
                                 <div className="hidden lg:block">
                                     <h3 className="sr-only">Categories</h3>
@@ -453,9 +453,9 @@ export default function Filtre({ children }) {
                                 </div>
 
                                 {/* Product grid */}
-                                <div className="lg:col-span-3">
+                                <div className="lg:col-span-5">
                                     {/* Replace with your content */}
-                                    <div className=" border-l  rounded-lg h-96 lg:h-full overflow-auto">
+                                    <div className=" border-l   h-96 lg:h-full overflow-auto px-4">
                                         {children}
                                     </div>
                                     {/* /End replace */}

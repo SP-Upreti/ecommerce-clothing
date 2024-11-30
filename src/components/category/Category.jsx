@@ -63,7 +63,7 @@ export default function Category() {
     return (
         <div className='w-[90%]  px-4 sm:py-16  sm:px-6 lg:px-8 mx-auto'>
 
-            <div className="grid grid-cols-5 gap-10 ">
+            <div className="grid grid-cols-3 lg:grid-cols-5 gap-10 ">
                 <div className="col-span-3 gap-x-10 border-2 border-slate-300 rounded-xl">
 
                     <Swiper

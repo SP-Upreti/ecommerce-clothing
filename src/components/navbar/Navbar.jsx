@@ -6,7 +6,7 @@ export default function Navbar() {
         <header className='shadow-md font-[sans-serif] tracking-wide relative z-50'>
             <section
                 className='md:flex lg:items-center relative py-3 lg:px-10 px-4 border-gray-200 border-b bg-white lg:min-h-[80px] max-lg:min-h-[60px]'>
-                <Link className="max-sm:w-full max-sm:mb-3 shrink-0" href={"/"}>
+                <Link className="hidden md:block max-sm:w-full max-sm:mb-3 shrink-0" href={"/"}>
                     <img
                         src="/logo.svg" alt="logo" className='w-[160px]' />
                 </Link>
@@ -90,24 +90,15 @@ export default function Navbar() {
                         <a href="#"><img src="https://readymadeui.com/readymadeui-white.svg" alt="logo" className='w-36' />
                         </a>
                     </li>
-                    <li className='max-lg:border-b max-lg:py-3 px-3'><a href='#'
-                        className='hover:text-yellow-300 text-yellow-300 text-[15px] font-medium block'>New</a></li>
-                    <li className='max-lg:border-b max-lg:py-3 px-3'><a href='#'
-                        className='hover:text-yellow-300 text-white text-[15px] font-medium block'>Electronics</a></li>
-                    <li className='max-lg:border-b max-lg:py-3 px-3'><a href='#'
-                        className='hover:text-yellow-300 text-white text-[15px] font-medium block'>Fashion</a></li>
-                    <li className='max-lg:border-b max-lg:py-3 px-3'><a href='#'
-                        className='hover:text-yellow-300 text-white text-[15px] font-medium block'>Kitchen Utils</a></li>
-                    <li className='max-lg:border-b max-lg:py-3 px-3'><a href='#'
-                        className='hover:text-yellow-300 text-white text-[15px] font-medium block'>Beauty</a></li>
-                    <li className='max-lg:border-b max-lg:py-3 px-3'><a href='#'
-                        className='hover:text-yellow-300 text-white text-[15px] font-medium block'> Sports & Outdoors</a></li>
-                    <li className='max-lg:border-b max-lg:py-3 px-3'><a href='#'
-                        className='hover:text-yellow-300 text-white text-[15px] font-medium block'>Baby Products</a></li>
-                    <li className='max-lg:border-b max-lg:py-3 px-3'><a href='#'
-                        className='hover:text-yellow-300 text-white text-[15px] font-medium block'>Entertainment</a></li>
-                    <li className='max-lg:border-b max-lg:py-3 px-3'><a href='#'
-                        className='hover:text-yellow-300 text-white text-[15px] font-medium block'>Groceries</a></li>
+                    <Link className='hover:text-yellow-300 text-white text-[15px] font-medium block' href={"/products"}><li className='max-lg:border-b max-lg:py-3 px-3'> New </li></Link>
+                    <Link className='hover:text-yellow-300 text-white text-[15px] font-medium block' href={"/products"}><li className='max-lg:border-b max-lg:py-3 px-3'>Electronics</li></Link>
+                    <Link className='hover:text-yellow-300 text-white text-[15px] font-medium block' href={"/products"}><li className='max-lg:border-b max-lg:py-3 px-3'>Fashion</li></Link>
+                    <Link className='hover:text-yellow-300 text-white text-[15px] font-medium block' href={"/products"}><li className='max-lg:border-b max-lg:py-3 px-3'>Kitchen Utils</li></Link>
+                    <Link className='hover:text-yellow-300 text-white text-[15px] font-medium block' href={"/products"}><li className='max-lg:border-b max-lg:py-3 px-3'>Beauty</li></Link>
+                    <Link className='hover:text-yellow-300 text-white text-[15px] font-medium block' href={"/products"}><li className='max-lg:border-b max-lg:py-3 px-3'> Sports & Outdoors</li></Link>
+                    <Link className='hover:text-yellow-300 text-white text-[15px] font-medium block' href={"/products"}><li className='max-lg:border-b max-lg:py-3 px-3'>Baby Products</li></Link>
+                    <Link className='hover:text-yellow-300 text-white text-[15px] font-medium block' href={"/products"}><li className='max-lg:border-b max-lg:py-3 px-3'>Entertainment</li></Link>
+                    <Link className='hover:text-yellow-300 text-white text-[15px] font-medium block' href={"/products"}><li className='max-lg:border-b max-lg:py-3 px-3'>Groceries</li></Link>
                 </ul>
             </div>
         </header>
