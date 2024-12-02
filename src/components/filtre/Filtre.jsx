@@ -207,8 +207,6 @@ export default function Filtre({ children }) {
                                     </ul>
 
                                     <FiltreOption />
-                                    <FiltreOption />
-                                    <FiltreOption />
                                     {/*  */}
                                 </div>
 

@@ -8,11 +8,13 @@ import Test from "@/components/test/Test";
 import Testimonial from "@/components/testimonial/testimonial";
 import Category from "@/components/category/Category";
 import News from "@/components/news/news";
+import Notice from "@/components/Notice/Notice";
 
 export default function Home() {
   return (
     <div className="">
       <Navbar />
+      <Notice />
       <Hero />
       <Products />
       <Category />
