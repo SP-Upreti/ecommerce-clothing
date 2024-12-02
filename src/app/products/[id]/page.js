@@ -1,12 +1,16 @@
+import Footer from '@/components/footer/footer'
 import Navbar from '@/components/navbar/Navbar'
 import Details from '@/components/products/details'
 import React from 'react'
 
-export default function page() {
+export default async function Page({ params }) {
+    const { id } = await params // Await the params object before accessing its properties
+
     return (
-        <div>
+        <>
             <Navbar />
-            <Details />
-        </div>
+            <Details id={id} />
+            <Footer />
+        </>
     )
 }
