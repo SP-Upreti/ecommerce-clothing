@@ -13,7 +13,7 @@ export default function CategoryList() {
                 category?.slice(0, 10).map(
                     (data, idx) => {
                         return (
-                            <Link key={idx} className='hover:text-yellow-300 text-white text-[15px] font-medium block' href={"/products"}><li className='max-lg:border-b max-lg:py-3 px-3'> {data} </li></Link>
+                            <Link key={idx} className='hover:text-yellow-300 capitalize text-white text-[15px]   block' href={"/products"}><li className='max-lg:border-b max-lg:py-3 px-3'> {data} </li></Link>
                         )
                     }
                 )
