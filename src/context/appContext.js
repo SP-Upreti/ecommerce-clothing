@@ -6,6 +6,7 @@ export const AppContext = createContext();
 
 export const AppContextProvider = ({ children }) => {
     const [products, setProducts] = useState([]);
+    const [allproducts, setAllproducts] = useState([]);
     const [loading, setLoading] = useState(false);
     const [category, setCategory] = useState([]);
     const [productDetail, setProductDetail] = useState([]);
@@ -17,7 +18,8 @@ export const AppContextProvider = ({ children }) => {
             setLoading(true);
             const res = await fetch("https://dummyjson.com/products");
             const data = await res.json();
-            setProducts(data.products);
+            // setProducts(data.products);
+            setAllproducts(data.products)
         } catch (err) {
             console.error("Failed to fetch products:", err.message);
         } finally {
@@ -88,7 +90,7 @@ export const AppContextProvider = ({ children }) => {
     }, []); // Only runs once when the component mounts
 
     return (
-        <AppContext.Provider value={{ products, loading, searchProduct, category, prodDetail, productDetail, getProductsByCategory, clickedCategory }}>
+        <AppContext.Provider value={{ products, loading, searchProduct, category, prodDetail, productDetail, getProductsByCategory, clickedCategory, allproducts }}>
             {children}
         </AppContext.Provider>
     );

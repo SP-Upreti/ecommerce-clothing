@@ -6,7 +6,7 @@ import { AppContext } from '@/context/appContext'
 
 export default function Products() {
 
-    const { products } = useContext(AppContext)
+    const { allproducts } = useContext(AppContext)
     return (
         <div className="w-[90%] mx-auto  px-4 py-8 sm:py-10 sm:px-6 lg:px-8">
             <div className="py-4 text-3xl font-semibold">
@@ -14,7 +14,7 @@ export default function Products() {
             </div>
             <div className=' grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-2'>
                 {
-                    products?.map(
+                    allproducts?.slice(0, 10).map(
                         (data, key) => {
                             return (
                                 <ProductCard data={data} key={key} />
