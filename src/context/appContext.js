@@ -8,8 +8,9 @@ export const AppContextProvider = ({ children }) => {
     const [products, setProducts] = useState([]);
     const [loading, setLoading] = useState(false);
     const [category, setCategory] = useState([]);
+    const [productDetail, setProductDetail] = useState([]);
+    const [clickedCategory, setClickedCategory] = useState(null);
 
-    const [productDetail, setProductDetail] = useState([])
 
     const fetchProduct = async () => {
         try {
@@ -67,13 +68,27 @@ export const AppContextProvider = ({ children }) => {
         }
     }
 
+    const getProductsByCategory = async (category) => {
+        try {
+            setLoading(true);
+            const res = await fetch(`https://dummyjson.com/products/category/${category}`);
+            const data = await res.json();
+            setProducts(data.products); // Ensure it uses `data.products`
+        } catch (err) {
+            console.error("Failed to fetch products by category:", err.message);
+        } finally {
+            setLoading(false);
+        }
+    };
+
+
     useEffect(() => {
         fetchProduct();
         getCategories();
     }, []); // Only runs once when the component mounts
 
     return (
-        <AppContext.Provider value={{ products, loading, searchProduct, category, prodDetail, productDetail }}>
+        <AppContext.Provider value={{ products, loading, searchProduct, category, prodDetail, productDetail, getProductsByCategory, clickedCategory }}>
             {children}
         </AppContext.Provider>
     );

@@ -14,20 +14,20 @@ export const metadata = {
   description:
     "Explore a wide range of quality products at unbeatable prices. Shop now and enjoy fast shipping and top-notch customer service.",
   openGraph: {
-    title: "Your E-commerce Store - Quality Products Online",
+    title: "My E-commerce Store - Quality Products Online",
     description:
       "Discover our exclusive deals and discounts on top products. Shop now for the best deals online!",
     images: ["https://yourdomain.com/images/og-image.jpg"],
-    url: "https://yourdomain.com",
+    url: "surendraupreti.com.npz",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Your E-commerce Store - Quality Products Online",
+    title: "My E-commerce Store - Quality Products Online",
     description:
       "Shop premium products at affordable prices. Free shipping on all orders!",
     images: ["https://yourdomain.com/images/twitter-image.jpg"],
-    site: "@yourtwitterhandle",
+    site: "surendraupreti.com.np",
   },
 };
 

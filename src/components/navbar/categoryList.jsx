@@ -1,11 +1,18 @@
 "use client"
 import Link from 'next/link'
 import { AppContext } from '@/context/appContext'
-import React, { useContext } from 'react'
+import React, { useContext, useState } from 'react'
 
 export default function CategoryList() {
 
-    const { category } = useContext(AppContext)
+    const { category, getProductsByCategory } = useContext(AppContext);
+    const [clickedCategory, setClickedCategory] = useState("");
+
+    const handleClick = async (category) => {
+        if (category) {
+            await getProductsByCategory(category);
+        }
+    };
 
     return (
         <>
@@ -13,7 +20,19 @@ export default function CategoryList() {
                 category?.slice(0, 10).map(
                     (data, idx) => {
                         return (
-                            <Link key={idx} className='hover:text-yellow-300 capitalize text-white text-[15px]   block' href={"/products"}><li className='max-lg:border-b max-lg:py-3 px-3'> {data} </li></Link>
+                            <Link
+                                key={idx}
+                                className='hover:text-yellow-300 capitalize text-white text-[15px] block'
+                                href="/products"
+                                onClick={() => {
+                                    setClickedCategory(data);
+                                    handleClick(data); // Now calling handleClick here
+                                }}
+                            >
+                                <li className='max-lg:border-b max-lg:py-3 px-3'>
+                                    {data}
+                                </li>
+                            </Link>
                         )
                     }
                 )

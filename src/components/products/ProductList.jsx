@@ -18,18 +18,19 @@ export default function ProductList() {
                             ></div>
                         </div>
                     </div>) :
-                        products.length === 0 && (
-                            <div className="">Not found try searching something else</div>
+                        products.map(
+                            (data, key) => {
+                                return (
+                                    <ProductCard data={data} key={key} />
+                                )
+                            }
                         )
+
 
                 }
                 {
-                    products.map(
-                        (data, key) => {
-                            return (
-                                <ProductCard data={data} key={key} />
-                            )
-                        }
+                    products.length === 0 && (
+                        <div className="">Not found try searching something else</div>
                     )
                 }
             </div>
