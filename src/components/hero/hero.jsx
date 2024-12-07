@@ -25,7 +25,7 @@ export default function Hero() {
         {
             avatar: "/samsung.png",
             name: "Karim Ahmed",
-            title: "Sansung S24Ultra",
+            title: "Samsung S24Ultra",
             quote: "There is no one who loves pain itself, who seeks after it and wants to have it, simply because it is.",
         }
     ];
