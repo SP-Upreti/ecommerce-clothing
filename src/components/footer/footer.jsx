@@ -75,7 +75,7 @@ export default function Footer() {
                         <div className="flex-none p-1.5 px-4 rounded-full bg-indigo-800 flex items-center justify-center font-medium text-sm">
                             News
                         </div>
-                        <p className="font-medium p-2">
+                        <p className="font-medium ">
                             We just launched a new version of our library! <a href="javascript:(0)" className="font-semibold underline duration-150 hover:text-indigo-100 inline-flex items-center gap-x-1">
                                 Learn more
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-5 h-5">
@@ -84,11 +84,6 @@ export default function Footer() {
                             </a>
                         </p>
                     </div>
-                    <button className="p-2 rounded-lg duration-150 hover:bg-indigo-500 ring-offset-2 focus:ring">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-6 h-6">
-                            <path d="M6.28 5.22a.75.75 0 00-1.06 1.06L8.94 10l-3.72 3.72a.75.75 0 101.06 1.06L10 11.06l3.72 3.72a.75.75 0 101.06-1.06L11.06 10l3.72-3.72a.75.75 0 00-1.06-1.06L10 8.94 6.28 5.22z" />
-                        </svg>
-                    </button>
                 </div>
             </div>
             <div className=" px-4 py-5  mx-auto md:px-10">
@@ -120,7 +115,7 @@ export default function Footer() {
                             </div>
                         </form>
                     </div>
-                    <div className="flex-1 mt-10 space-y-6 items-center justify-between sm:flex md:space-y-0 md:mt-0">
+                    <div className="flex-1 mt-10  items-center justify-between flex flex-wrap md:space-y-0 md:mt-0">
                         {
                             footerNavs.map((item, idx) => (
                                 <ul

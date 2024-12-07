@@ -14,13 +14,13 @@ export default function Home() {
   return (
     <div className="">
       <Navbar />
-      <Notice />
+      {/* <Notice /> */}
       <Hero />
       <Products />
       <Category />
       <Sale />
       <Test />
-      <Testimonial />
+      {/* <Testimonial /> */}
       <News />
       <Footer />
     </div>

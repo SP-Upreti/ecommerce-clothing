@@ -6,8 +6,8 @@ export default function ProductCard({ data }) {
         <>
             {
                 data ? (
-                    <Link href={`/products/${data?.id}`}>
-                        <div className="flex flex-col gap-2 w-full h-full overflow-hidden shadow">
+                    <Link href={`/products/${data?.id}`} className="group block hover:shadow hover:scale-110 transition-all p-2">
+                        {/* <div className="flex flex-col gap-2 w-full h-full overflow-hidden shadow">
                             <div className="relative aspect-square flex justify-center items-center h-[150px] w-[150px] overflow-hidden">
                                 <Image
                                     src={data?.images[0]}
@@ -22,6 +22,21 @@ export default function ProductCard({ data }) {
                             <div className="font-semibold px-4 pb-2">
                                 <p className="font-semibold text-lg">{data?.title ? data.title : ""}</p>
                                 <h2 className="text-xl text-yellow-500">Rs. {data?.price ? data.price : ""}</h2>
+                            </div>
+                        </div> */}
+                        <img
+                            src={data?.images[0]}
+                            alt=""
+                            className="h-[150px] w-full object-cover  sm:h-[250px] p-2"
+                        />
+
+                        <div className="">
+                            <div className="">
+                                <h3 className="text-gray-900 group-hover:underline group-hover:underline-offset-4 sm:text-lg">
+                                    {data?.title ? data.title : ""}
+                                </h3>
+
+                                <p className="text-gray-900 text-xl sm:text-2xl font-bold">Rs. {data?.price ? data.price : ""}</p>
                             </div>
                         </div>
                     </Link>

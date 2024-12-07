@@ -5,84 +5,82 @@ import "swiper/css/pagination";
 import Image from "next/image";
 import { Navigation, Pagination, A11y, Autoplay } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
+import { useState } from "react";
 
 export default function Hero() {
-    const testimonials = [
+    const [arry, setArry] = useState([])
+    const heroSlider = [
         {
-            avatar: "https://api.uifaces.co/our-content/donated/xZ4wg2Xj.jpg",
+            avatar: "/Group 1.png",
             name: "Martin Escobar",
-            title: "Founder of Meta",
+            title: "Cannon Camera",
             quote: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc et est hendrerit, porta nunc.",
         },
         {
-            avatar: "https://randomuser.me/api/portraits/women/79.jpg",
+            avatar: "/laptop3.png",
             name: "Angela Stian",
-            title: "Product Designer",
+            title: "Asus Laptop",
             quote: "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.",
         },
         {
-            avatar: "https://randomuser.me/api/portraits/men/86.jpg",
+            avatar: "/samsung.png",
             name: "Karim Ahmed",
-            title: "DevOp Engineer",
+            title: "Sansung S24Ultra",
             quote: "There is no one who loves pain itself, who seeks after it and wants to have it, simply because it is.",
         }
     ];
 
     const categories = [
         {
-            name: "smart watches",
-            img: "/watch.png"
+            name: "Phones",
+            img: "/category/Phones.svg"
         },
         {
-            name: "wireless Earphone",
-            img: "/earphone.png"
+            name: "Smart Watches",
+            img: "/category/Smart Watches.svg"
         },
         {
-            name: "wireless headphone",
-            img: "/headphone.png"
+            name: "Cameras",
+            img: "/category/Cameras.svg"
         },
         {
-            name: "smart phones",
-            img: "/phone.png"
+            name: "Headphones",
+            img: "/category/Headphones.svg"
         },
         {
-            name: "running shoe",
-            img: "/shoe.png"
+            name: "Computers",
+            img: "/category/Computers.svg"
         },
         {
-            name: "Leather items",
-            img: "/leather.png"
+            name: "Gaming",
+            img: "/category/Gaming.svg"
         },
         {
-            name: "smart watches",
-            img: "/watch.png"
+            name: "Tablets",
+            img: "/category/Tablet.svg"
         },
         {
-            name: "wireless Earphone",
-            img: "/earphone.png"
+            name: "Drones",
+            img: "/category/Drone.svg"
         },
         {
-            name: "wireless headphone",
-            img: "/headphone.png"
+            name: "Printers",
+            img: "/category/Printer.svg"
         },
         {
-            name: "smart phones",
-            img: "/phone.png"
+            name: "Smart Home",
+            img: "/category/SmartHome.svg"
         },
         {
-            name: "running shoe",
-            img: "/shoe.png"
-        },
-        {
-            name: "Leather items",
-            img: "/leather.png"
-        },
+            name: "Wearables",
+            img: "/category/Wearables.svg"
+        }
+    ];
 
-    ]
     return (
-        <section className="py-10">
+        <section className="">
             <div className="max-w-screen-xl mx-auto px-4 md:px-8">
-                <div className="py-5">
+                <div className="py-8">
                     <Swiper
                         modules={[Pagination, Autoplay, A11y]}
                         spaceBetween={30}
@@ -93,12 +91,13 @@ export default function Hero() {
                             el: ".custom-pagination",
                             clickable: true
                         }}
+
                     >
-                        {testimonials.map((item, idx) => (
+                        {heroSlider.map((item, idx) => (
                             <SwiperSlide key={idx} className="pb-4">
                                 <div className="flex justify-between flex-col-reverse md:flex-row ">
                                     <div className="flex flex-col gap-4">
-                                        <h2 className="text-5xl font-bold max-w-[5rem] leading-[50px] text-teal-800">Cannon Camera</h2>
+                                        <h2 className="text-5xl font-bold max-w-[5rem] leading-[50px] text-teal-800">{item.title}</h2>
                                         <p className="hidden sm:block w-1/2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum sunt voluptatum cumque voluptatem totam cupiditate minus, magnam quaerat velit iusto?</p>
                                         <div className="flex gap-8 items-center w-fit">
                                             <button className="cartBtn rounded-full px-4">
@@ -108,7 +107,7 @@ export default function Hero() {
                                             </button>
                                             <button
                                                 type="submit"
-                                                className="w-fit  border flex justify-center gap-2 items-center mx-auto shadow-xl text-lg uppercase bg-gray-50 backdrop-blur-md lg:font-semibold isolation-auto  before:absolute before:w-full before:transition-all before:duration-700 before:hover:w-full before:-left-full before:hover:left-0 py-2 before:rounded-full before:bg-emerald-500 hover:text-gray-50 before:-z-10 before:aspect-square before:hover:scale-150 before:hover:duration-700 relative z-10 px-4  overflow-hidden border-slate-200 rounded-full group"
+                                                className="w-fit  border flex justify-center gap-2 items-center mx-auto shadow-xl text-lg uppercase bg-gray-50 backdrop-blur-md lg:font-semibold isolation-auto  before:absolute before:w-full before:transition-all before:duration-500 before:hover:w-full before:-left-full before:hover:left-0 py-2 before:rounded-full before:bg-[--primary] hover:text-gray-50 before:-z-10 before:aspect-square before:hover:scale-150 before:hover:duration-700 relative z-10 px-4  overflow-hidden border-slate-200 rounded-full group"
                                             >
                                                 Explore
                                                 <svg
@@ -126,16 +125,37 @@ export default function Hero() {
                                         </div>
                                     </div>
                                     <div className="">
-                                        <Image src={"/Group 1.png"} alt="okay" height={300} width={300} />
+                                        <Image src={item.avatar} alt="okay" height={300} width={300} />
                                     </div>
                                 </div>
                             </SwiperSlide>
                         ))}
                     </Swiper>
-                    <div className="custom-pagination mt-6"></div>
+                    <div className=" custom-pagination mt-10"></div>
                 </div>
 
-                <div className="py-10  relative">
+                <div className="relative">
+                    <div className="mb-5 flex justify-between items-center">
+                        <div className="">
+                            <h2 className="font-[900] text-2xl">Browse By Category</h2>
+                        </div>
+                        {/* Custom Navigation Buttons */}
+                        <div className="flex ">
+                            <button className="prev-el  h-[50px] w-[50px] flex justify-center items-center text-gray-700 p-2">
+                                <span className="rotate-180">
+                                    <img src="/Arrow.svg" alt="/Arrow.svg" />
+                                </span>
+                            </button>
+                            <button className="next-el   h-[50px] w-[50px] flex justify-center items-center text-gray-700 p-2 ">
+                                <span >
+                                    <img src="/Arrow.svg" alt="/Arrow.svg" />
+                                </span>
+                            </button>
+                        </div>
+                    </div>
+                    {
+
+                    }
                     <Swiper
                         modules={[Pagination, Autoplay, A11y, Navigation]}
                         spaceBetween={30}
@@ -150,51 +170,31 @@ export default function Hero() {
                         }
                         breakpoints={{
                             0: {
-                                slidesPerView: 1
+                                slidesPerView: 1,
+                                navigation: false
                             },
                             768: {
                                 slidesPerView: 2
                             },
                             1000: {
-                                slidesPerView: 3
+                                slidesPerView: 6
                             }
                         }}
                     >
                         {categories.map((item, idx) => (
-                            <SwiperSlide key={idx} className="">
-                                <div className="flex justify-between gap-10 px-8 items-center p-4 border-2 border-slate-300 rounded-md">
-                                    <div className="h-[8rem] w-[8rem] bg-slate-100 rounded-full flex justify-center items-center">
-                                        <Image src={item.img} alt="okay" height={100} width={100} style={{ width: "5rem", height: "auto" }} />
+                            <SwiperSlide key={idx} className="group">
+                                <div className="bg-[#EDEDED] hover:bg-white hover:shadow-md rounded-md w-[168px] h-[128px] flex flex-col justify-center items-center gap-2 cursor-pointer">
+                                    <div className=" rounded-full flex justify-center items-center group-hover:animate-bounce">
+                                        <img src={item.img} alt={item.name} />
                                     </div>
                                     <div className="">
-                                        <h2 className="text-2xl font-bold capitalize">{item.name}</h2>
-                                        <p className="text-lg">{"("}{idx + 12} items{")"}</p>
+                                        <h2 className="text-[18px] font-sans font-semibold capitalize">{item.name}</h2>
                                     </div>
                                 </div>
                             </SwiperSlide>
                         ))}
                     </Swiper>
-                    {/* Custom Navigation Buttons */}
-                    <div className="flex justify-between w-full mt-4 absolute top-1/2 translate-y-[-90%] z-10">
-                        <button className="prev-el translate-x-[-5rem] bg-gray-200 hover:bg-gray-300 hover:text-white text-gray-700 h-[50px] w-[50px] flex justify-center items-center p-2 rounded-full shadow-md">
-                            <span>
-                                <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M10.07 6.42999L4 12.5L10.07 18.57" stroke="#292D32" strokeWidth="1.5" strokeMiterlimit="10" strokeLinecap="round" strokeLinejoin="round" />
-                                    <path d="M21 12.5H4.17004" className="stroke-black hover:stroke-yellow-500" stroke="" strokeWidth="1.5" strokeMiterlimit="10" strokeLinecap="round" strokeLinejoin="round" />
-                                </svg>
 
-                            </span>
-                        </button>
-                        <button className="next-el translate-x-[5rem] hover:bg-gray-300 hover:text-white bg-gray-200 rotate-180    h-[50px] w-[50px] flex justify-center items-center text-gray-700 p-2 rounded-full shadow-md">
-                            <span>
-                                <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M10.07 6.42999L4 12.5L10.07 18.57" stroke="#292D32" strokeWidth="1.5" strokeMiterlimit="10" strokeLinecap="round" strokeLinejoin="round" />
-                                    <path d="M21 12.5H4.17004" stroke="#292D32" strokeWidth="1.5" strokeMiterlimit="10" strokeLinecap="round" strokeLinejoin="round" />
-                                </svg>
-
-                            </span>
-                        </button>
-                    </div>
                 </div>
             </div>
 

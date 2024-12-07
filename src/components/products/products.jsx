@@ -8,7 +8,7 @@ export default function Products() {
 
     const { allproducts } = useContext(AppContext)
     return (
-        <div className="w-[90%] mx-auto  px-4 py-8 sm:py-10 sm:px-6 lg:px-8">
+        <div className="relative z-10 max-w-screen-xl mx-auto px-4 py-10  gap-24  md:px-8 lg:px-8">
             <div className="py-4 text-3xl font-semibold">
                 <h2>Popular Items</h2>
             </div>
@@ -26,7 +26,7 @@ export default function Products() {
             <div className="flex flex-col items-center md:flex-row my-8">
 
                 <Link href={"/products"}
-                    className="inline-flex items-center justify-center w-full h-12 px-6 mb-3 font-medium tracking-wide text-white transition duration-200 rounded shadow-md md:w-auto md:mr-4 md:mb-0 bg-purple-500 hover:bg-deep-purple-accent-700 focus:shadow-outline focus:outline-none"
+                    className="inline-flex items-center justify-center w-full h-12 px-6 mb-3 font-medium tracking-wide text-white transition duration-200 rounded shadow-md md:w-auto md:mr-4 md:mb-0 bg-[--primary] hover:bg-purple-700 focus:shadow-outline focus:outline-none"
                 >
                     {/* <a
                     href="/"

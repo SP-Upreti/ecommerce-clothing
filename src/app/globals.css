@@ -2,180 +2,146 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+    --primary: #c002c3e6;
+    --secondary: rgb(248, 86, 6);
+}
 
 .svg-icon path,
 .svg-icon polygon,
 .svg-icon rect {
-    fill: currentColor !important;
+    @apply fill-current !important;
 }
-
 
 /* Custom Pagination Container */
 .custom-pagination {
-    display: flex;
-    align-items: center;
+    @apply flex items-center relative mt-2;
     padding-left: 4rem;
-    position: relative;
+    /* Custom padding */
     bottom: 20px;
     /* Adjust position */
-    margin-top: 10px;
-    /* Add some spacing from Swiper */
 }
 
 /* Pagination Bullets */
 .custom-pagination .swiper-pagination-bullet {
-    width: 15px;
-    height: 15px;
-    background-color: transparent;
-    border: 2px solid gray;
-    border-radius: 50%;
-    margin: 0 5px;
-    /* Spacing between bullets */
-    opacity: 1;
-    /* Make bullets always visible */
-    transition: transform 0.3s ease, background-color 0.3s ease;
+    @apply w-4 h-4 bg-transparent border-2 border-gray-500 rounded-full mx-1 opacity-100 transition-transform ease-in-out duration-300;
 }
 
 /* Active Bullet */
 .custom-pagination .swiper-pagination-bullet-active {
-    border: 2px solid #f59e0b;
-    background-color: #f59e0b;
-    /* Darker yellow for active */
-    transform: scale(1.2);
-    /* Enlarge active bullet */
+    @apply border-[--primary] bg-[--primary] transform scale-125;
 }
 
-
-/* From Uiverse.io by e-coders */
+/* Loader Animation (Retained as custom styles) */
 @keyframes ldio-4j5ay0xf86g {
     0% {
-        opacity: 1
+        opacity: 1;
     }
 
     100% {
-        opacity: 0
+        opacity: 0;
     }
 }
 
 .ldio-4j5ay0xf86g div {
-    left: 94px;
-    top: 48px;
-    position: absolute;
-    animation: ldio-4j5ay0xf86g linear 1s infinite;
-    background: #fe718d;
+    @apply absolute bg-pink-500;
     width: 12px;
     height: 24px;
     border-radius: 6px / 12px;
     transform-origin: 6px 52px;
+    animation: ldio-4j5ay0xf86g linear 1s infinite;
 }
 
 .ldio-4j5ay0xf86g div:nth-child(1) {
     transform: rotate(0deg);
     animation-delay: -0.9166666666666666s;
-    background: #fe718d;
 }
 
 .ldio-4j5ay0xf86g div:nth-child(2) {
     transform: rotate(30deg);
     animation-delay: -0.8333333333333334s;
-    background: #fe718d;
 }
 
 .ldio-4j5ay0xf86g div:nth-child(3) {
     transform: rotate(60deg);
     animation-delay: -0.75s;
-    background: #fe718d;
 }
 
 .ldio-4j5ay0xf86g div:nth-child(4) {
     transform: rotate(90deg);
     animation-delay: -0.6666666666666666s;
-    background: #fe718d;
 }
 
 .ldio-4j5ay0xf86g div:nth-child(5) {
     transform: rotate(120deg);
     animation-delay: -0.5833333333333334s;
-    background: #fe718d;
 }
 
 .ldio-4j5ay0xf86g div:nth-child(6) {
     transform: rotate(150deg);
     animation-delay: -0.5s;
-    background: #fe718d;
 }
 
 .ldio-4j5ay0xf86g div:nth-child(7) {
     transform: rotate(180deg);
     animation-delay: -0.4166666666666667s;
-    background: #fe718d;
 }
 
 .ldio-4j5ay0xf86g div:nth-child(8) {
     transform: rotate(210deg);
     animation-delay: -0.3333333333333333s;
-    background: #fe718d;
 }
 
 .ldio-4j5ay0xf86g div:nth-child(9) {
     transform: rotate(240deg);
     animation-delay: -0.25s;
-    background: #fe718d;
 }
 
 .ldio-4j5ay0xf86g div:nth-child(10) {
     transform: rotate(270deg);
     animation-delay: -0.16666666666666666s;
-    background: #fe718d;
 }
 
 .ldio-4j5ay0xf86g div:nth-child(11) {
     transform: rotate(300deg);
     animation-delay: -0.08333333333333333s;
-    background: #fe718d;
 }
 
 .ldio-4j5ay0xf86g div:nth-child(12) {
     transform: rotate(330deg);
     animation-delay: 0s;
-    background: #fe718d;
 }
 
 .loadingio-spinner-spinner-977el9wwy2v {
-    width: 200px;
-    height: 200px;
-    display: inline-block;
-    overflow: hidden;
+    @apply w-48 h-48 inline-block overflow-hidden;
 }
 
 .ldio-4j5ay0xf86g {
-    width: 100%;
-    height: 100%;
-    position: relative;
-    transform: translateZ(0) scale(1);
+    @apply w-full h-full relative transform scale-100;
     backface-visibility: hidden;
+    /* Add the property directly here */
     transform-origin: 0 0;
-    /* see note above */
 }
 
 .ldio-4j5ay0xf86g div {
-    box-sizing: content-box;
+    @apply box-content;
 }
 
 /* From Uiverse.io by vinodjangid07 */
 .cartBtn {
-    width: 175px;
+    /* width: 155px; */
     height: 50px;
     border: none;
-    /* border-radius: 0px; */
+    border-radius: 0px;
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 10px;
     color: white;
+    border-radius: 10px;
     font-weight: 500;
     position: relative;
-    background-color: rgb(29, 29, 29);
+    background-color: #c002c3e6;
     box-shadow: 0 20px 30px -7px rgba(27, 27, 27, 0.219);
     transition: all 0.3s ease-in-out;
     cursor: pointer;

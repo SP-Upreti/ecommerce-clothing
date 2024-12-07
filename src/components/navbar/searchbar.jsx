@@ -28,14 +28,14 @@ export default function SearchBar() {
     };
 
     return (
-        <div className="pb-1 md:pb-0">
+        <div className="pb-2 md:pb-0 w-[90%] md:w-auto">
             <form onSubmit={Search}>
                 <input
                     type="text"
                     value={value}
                     onChange={(e) => setValue(e.target.value)}
                     placeholder="Search something..."
-                    className=" xl:w-96 max-lg:w-full lg:ml-10 max-md:mt-4 max-lg:ml-4 bg-gray-100 focus:bg-transparent px-6 rounded h-11 outline-[#333] text-sm transition-all"
+                    className="w-full xl:w-96 max-lg:w-full lg:ml-10 max-md:mt-4 max-lg:ml-4 bg-gray-100 focus:bg-transparent px-6 rounded h-11 outline-[#333] text-sm transition-all"
                 />
                 {error && (
                     <p className="text-red-500 text-sm mt-2">{error}</p>

@@ -2,38 +2,35 @@ import { TbTruckDelivery } from "react-icons/tb";
 import { LuCrown } from "react-icons/lu";
 import { RiShieldKeyholeLine } from "react-icons/ri";
 
-
 export default () => {
 
     const features = [
         {
             icon: <TbTruckDelivery />,
             title: "Fast Delivery",
-            desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec congue."
+            desc: "Get your products delivered quickly with our fast and reliable shipping options. We ensure that your items arrive on time, every time."
         },
         {
-            icon:
-                <LuCrown />,
+            icon: <LuCrown />,
             title: "Best Quality",
-            desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec congue."
+            desc: "We offer the highest quality products made from premium materials, ensuring durability and long-lasting use for all your needs."
         },
         {
-            icon:
-                <RiShieldKeyholeLine />,
-            title: "1 year warranty",
-            desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec congue."
+            icon: <RiShieldKeyholeLine />,
+            title: "1-Year Warranty",
+            desc: "Enjoy peace of mind with our 1-year warranty on all purchases. We're here to support you in case of any issues or concerns."
         },
-    ]
+    ];
 
     return (
         <section className="relative py-28 border">
-            <div className="relative z-10 max-w-screen-xl mx-auto px-4  justify-between gap-24 lg:flex md:px-8">
+            <div className="relative z-10 max-w-screen-xl mx-auto px-4 justify-between gap-24 lg:flex md:px-8">
                 <div className="max-w-xl">
-                    <h3 className=" text-3xl font-semibold sm:text-4xl">
-                        Do more with less complexity
+                    <h3 className="text-3xl font-semibold sm:text-4xl">
+                        Experience Best Quality and Service
                     </h3>
                     <p className="mt-3">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec congue, nisl eget molestie varius, enim ex faucibus purus
+                        Discover a seamless shopping experience with products that combine reliability, innovation, and exceptional customer care.
                     </p>
                 </div>
                 <div className="mt-12 lg:mt-0">
@@ -45,7 +42,7 @@ export default () => {
                                         {item.icon}
                                     </div>
                                     <div>
-                                        <h4 className="text-lg  font-semibold">
+                                        <h4 className="text-lg font-semibold">
                                             {item.title}
                                         </h4>
                                         <p className="mt-3">

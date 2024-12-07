@@ -6,20 +6,20 @@ export const AppContext = createContext();
 
 export const AppContextProvider = ({ children }) => {
     const [products, setProducts] = useState([]);
+    const [authenticated, setAuthenticated] = useState(false)
     const [allproducts, setAllproducts] = useState([]);
     const [loading, setLoading] = useState(false);
     const [category, setCategory] = useState([]);
     const [productDetail, setProductDetail] = useState([]);
     const [clickedCategory, setClickedCategory] = useState(null);
-
+    const [cart, setCart] = useState([]); // State to track cart items
 
     const fetchProduct = async () => {
         try {
             setLoading(true);
             const res = await fetch("https://dummyjson.com/products");
             const data = await res.json();
-            // setProducts(data.products);
-            setAllproducts(data.products)
+            setAllproducts(data.products);
         } catch (err) {
             console.error("Failed to fetch products:", err.message);
         } finally {
@@ -33,7 +33,6 @@ export const AppContextProvider = ({ children }) => {
             const res = await fetch(`https://dummyjson.com/products/search?q=${item}`);
             const data = await res.json();
             setProducts(data.products);
-            console.log(products)
         } catch (err) {
             console.error("Search failed:", err.message);
         } finally {
@@ -44,38 +43,35 @@ export const AppContextProvider = ({ children }) => {
     const prodDetail = async (id) => {
         try {
             setLoading(true);
-            const req = await fetch(`https://dummyjson.com/products/${id}`)
+            const req = await fetch(`https://dummyjson.com/products/${id}`);
             const data = await req.json();
             setProductDetail(data);
-            console.log("product detail", productDetail)
         } catch (err) {
             console.error("Search failed:", err.message);
         } finally {
             setLoading(false);
         }
-    }
+    };
+
     const getCategories = async () => {
         try {
             setLoading(true);
             const req = await fetch('https://dummyjson.com/products/category-list');
             const data = await req.json();
             setCategory(data);
+        } catch (err) {
+            console.log(err.message);
+        } finally {
+            setLoading(false);
         }
-        catch (err) {
-            console.log(err.message)
-            setLoading(false)
-        }
-        finally {
-            setLoading(false)
-        }
-    }
+    };
 
     const getProductsByCategory = async (category) => {
         try {
             setLoading(true);
             const res = await fetch(`https://dummyjson.com/products/category/${category}`);
             const data = await res.json();
-            setProducts(data.products); // Ensure it uses `data.products`
+            setProducts(data.products);
         } catch (err) {
             console.error("Failed to fetch products by category:", err.message);
         } finally {
@@ -83,6 +79,26 @@ export const AppContextProvider = ({ children }) => {
         }
     };
 
+    const addToCart = async (userId, cartProducts) => {
+        try {
+            setLoading(true);
+            const res = await fetch('https://dummyjson.com/carts/add', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    userId: userId,
+                    products: cartProducts, // Example: [{ id: 144, quantity: 4 }]
+                }),
+            });
+            const data = await res.json();
+            setCart(data); // Optionally update the local state with cart details
+            console.log("Cart updated:", data);
+        } catch (err) {
+            console.error("Failed to add to cart:", err.message);
+        } finally {
+            setLoading(false);
+        }
+    };
 
     useEffect(() => {
         fetchProduct();
@@ -90,7 +106,19 @@ export const AppContextProvider = ({ children }) => {
     }, []); // Only runs once when the component mounts
 
     return (
-        <AppContext.Provider value={{ products, loading, searchProduct, category, prodDetail, productDetail, getProductsByCategory, clickedCategory, allproducts }}>
+        <AppContext.Provider value={{
+            products,
+            allproducts,
+            loading,
+            category,
+            prodDetail,
+            productDetail,
+            searchProduct,
+            getProductsByCategory,
+            clickedCategory,
+            addToCart,
+            cart,
+        }}>
             {children}
         </AppContext.Provider>
     );
