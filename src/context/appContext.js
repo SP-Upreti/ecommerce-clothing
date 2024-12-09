@@ -11,7 +11,7 @@ export const AppContextProvider = ({ children }) => {
     const [loading, setLoading] = useState(false);
     const [category, setCategory] = useState([]);
     const [productDetail, setProductDetail] = useState([]);
-    const [clickedCategory, setClickedCategory] = useState(null);
+    const [clickedCategory, setClickedCategory] = useState("");
     const [cart, setCart] = useState([]); // State to track cart items
 
     const fetchProduct = async () => {
@@ -118,6 +118,7 @@ export const AppContextProvider = ({ children }) => {
             clickedCategory,
             addToCart,
             cart,
+            setClickedCategory
         }}>
             {children}
         </AppContext.Provider>

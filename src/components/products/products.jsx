@@ -14,6 +14,17 @@ export default function Products() {
             </div>
             <div className=' grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-2'>
                 {
+                    allproducts.length == 0 && (
+                        <section className="flex items-center justify-center h-full w-full">
+                            <div className="dot animate-pulse-custom"></div>
+                            <div className="dot animate-pulse-custom animation-delay-300"></div>
+                            <div className="dot animate-pulse-custom animation-delay-500"></div>
+                            <div className="dot animate-pulse-custom animation-delay-700"></div>
+                            <div className="dot animate-pulse-custom animation-delay-900"></div>
+                        </section>
+                    )
+                }
+                {
                     allproducts?.slice(0, 10).map(
                         (data, key) => {
                             return (

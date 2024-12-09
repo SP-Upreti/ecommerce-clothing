@@ -7,7 +7,7 @@ export default function ProductList() {
     const { products, loading } = useContext(AppContext);
     return (
         <div className="">
-            <div className=' grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4  gap-2'>
+            <div className=' grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4  gap-2 no-scrollbar'>
                 {
                     loading ? (<div className="flex justify-center items-center py-16 w-full">
                         <div

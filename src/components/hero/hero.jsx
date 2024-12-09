@@ -125,7 +125,14 @@ export default function Hero() {
                                         </div>
                                     </div>
                                     <div className="">
-                                        <Image src={item.avatar} alt="okay" height={300} width={300} />
+                                        <Image
+                                            src={item.avatar}
+                                            alt="okay"
+                                            height={300}
+                                            width={300}
+                                            placeholder="blur"
+                                            blurDataURL="/placeholder.jpg"
+                                        />
                                     </div>
                                 </div>
                             </SwiperSlide>

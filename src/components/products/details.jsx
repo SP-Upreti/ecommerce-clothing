@@ -27,53 +27,55 @@ export default function Details({ id }) {
                 {
                     loading ?
                         (
-                            <div
-                                className="flex flex-col bg-neutral-300 w-[90%] mx-auto animate-pulse rounded-xl p-4 gap-4"
-                            >
-                                <div className="bg-neutral-400/50 w-full h-72 animate-pulse rounded-md"></div>
-                                <div className="flex flex-col gap-2">
-                                    <div className="bg-neutral-400/50 w-full h-4 animate-pulse rounded-md"></div>
-                                    <div className="bg-neutral-400/50 w-4/5 h-4 animate-pulse rounded-md"></div>
-                                    <div className="bg-neutral-400/50 w-full h-4 animate-pulse rounded-md"></div>
-                                    <div className="bg-neutral-400/50 w-2/4 h-4 animate-pulse rounded-md"></div>
-                                </div>
-                            </div>
+                            <section className="flex items-center justify-center h-[60vh] w-full ">
+                                <div className="dot animate-pulse-custom"></div>
+                                <div className="dot animate-pulse-custom animation-delay-300"></div>
+                                <div className="dot animate-pulse-custom animation-delay-500"></div>
+                                <div className="dot animate-pulse-custom animation-delay-700"></div>
+                                <div className="dot animate-pulse-custom animation-delay-900"></div>
+                            </section>
                         ) : (
                             <div className="flex flex-wrap -mx-4">
                                 {/* Image Section */}
                                 <div className="w-full md:w-1/2 px-4 mb-8">
-                                    <div className="xl:max-h-[25rem] overflow-hidden flex justify-center items-center bg-slate-200">
-                                        {
-                                            productDetail.thumbnail ? (
-                                                <img
-                                                    src={productDetail.thumbnail}
-                                                    alt="Product"
-                                                    className=" md:h-[20rem] rounded-lg   mb-4"
-                                                    id="mainImage"
-                                                    loading="lazy"
-                                                />
-                                            ) : (
-                                                <div className="w-full h-full">
-                                                    <div
-                                                        className="flex flex-col bg-neutral-300 w-full h-full animate-pulse rounded-xl  "
-                                                    >
-                                                        <div className="bg-neutral-400/50 w-full h-full animate-pulse rounded-md"></div>
-                                                    </div>
-                                                </div>
-                                            )
-                                        }
+                                    <div className="xl:h-[25rem] overflow-hidden flex justify-center items-center bg-slate-200">
+                                        {productDetail?.images?.length > 0 &&
+                                            productDetail.images.map((src, index) => (
+                                                index == 0 && (
+                                                    <Image
+                                                        key={index}
+                                                        src={src}
+                                                        alt={`Thumbnail ${index + 1}`}
+                                                        height={500}
+                                                        width={500}
+                                                        className=" object-cover rounded-md cursor-pointer  transition duration-300"
+                                                        onMouseOver={() => setMainImage(src)}
+                                                        blurDataURL="/placeholder.jpg"
+                                                        priority={true}
+                                                        loading="eager"
+                                                        style={{ width: "90%" }}
+                                                        onError={() => console.log('Image failed to load')}
+                                                    />
+                                                )
+                                            ))}
+
                                     </div>
                                     <div className="flex gap-4 py-4 justify-center overflow-x-auto">
 
                                         {/* Thumbnail Images */}
                                         {productDetail?.images?.map((src, index) => (
-                                            <img
+                                            <Image
                                                 key={index}
+                                                width={100}
+                                                height={100}
                                                 src={src}
                                                 alt={`Thumbnail ${index + 1}`}
-                                                className="w-16 h-16 sm:w-20 sm:h-20 object-cover rounded-md cursor-pointer opacity-60 hover:opacity-100 transition duration-300"
-                                                onClick={() => changeImage(src)}
-                                                loading="lazy"
+                                                className="w-16 h-16 sm:w-20 border bg-slate-300 sm:h-20 object-cover rounded-md cursor-pointer opacity-60 hover:opacity-100 transition duration-300"
+                                                onMouseOver={() => setMainImage(src)}
+                                                blurDataURL="/placeholder.jpg" // Ensure the path to `placeholder.jpg` is correct
+                                                priority={true} // Use true for critical images
+                                                loading="eager" // Use "lazy" for non-critical images
+                                                onError={() => console.log('Image failed to load')} // Handle image loading errors
                                             />
                                         ))}
                                     </div>

@@ -5,8 +5,7 @@ import React, { useContext, useState } from 'react'
 
 export default function CategoryList() {
 
-    const { category, getProductsByCategory } = useContext(AppContext);
-    const [clickedCategory, setClickedCategory] = useState("");
+    const { category, getProductsByCategory, clickedCategory, setClickedCategory } = useContext(AppContext);
 
     const handleClick = async (category) => {
         if (category) {
@@ -22,7 +21,7 @@ export default function CategoryList() {
                         return (
                             <Link
                                 key={idx}
-                                className='hover:text-yellow-300 capitalize text-white text-[15px] block'
+                                className={`hover:text-yellow-300 ${clickedCategory.toLocaleLowerCase() === data.toLocaleLowerCase() ? "text-yellow-300" : ""} capitalize text-white text-[15px] block`}
                                 href="/products"
                                 onClick={() => {
                                     setClickedCategory(data);
