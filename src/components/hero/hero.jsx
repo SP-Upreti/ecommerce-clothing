@@ -178,24 +178,37 @@ export default function Hero() {
                         breakpoints={{
                             0: {
                                 slidesPerView: 1,
-                                navigation: false
+                                navigation: false,
+                                spaceBetween: 10
                             },
-                            768: {
+                            300: {
                                 slidesPerView: 2
                             },
-                            1000: {
+                            400: {
+                                slidesPerView: 3,
+                                spaceBetween: 30
+                            },
+                            600: {
+                                slidesPerView: 4
+                            }
+                            ,
+                            870: {
+                                slidesPerView: 5
+                            }
+                            ,
+                            1200: {
                                 slidesPerView: 6
                             }
                         }}
                     >
                         {categories.map((item, idx) => (
                             <SwiperSlide key={idx} className="group">
-                                <div className="bg-[#EDEDED] hover:bg-white hover:shadow-md rounded-md w-[168px] h-[128px] flex flex-col justify-center items-center gap-2 cursor-pointer">
+                                <div className="bg-[#EDEDED] hover:bg-white hover:shadow-md rounded-md sm:w-[168px] h-[128px] flex flex-col justify-center items-center gap-2 cursor-pointer">
                                     <div className=" rounded-full flex justify-center items-center group-hover:animate-bounce">
                                         <img src={item.img} alt={item.name} />
                                     </div>
                                     <div className="">
-                                        <h2 className="text-[18px] font-sans font-semibold capitalize">{item.name}</h2>
+                                        <h2 className="sm:text-[18px] font-sans font-semibold capitalize">{item.name}</h2>
                                     </div>
                                 </div>
                             </SwiperSlide>
