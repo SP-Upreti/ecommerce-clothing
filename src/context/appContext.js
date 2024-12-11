@@ -20,6 +20,7 @@ export const AppContextProvider = ({ children }) => {
             const res = await fetch("https://dummyjson.com/products");
             const data = await res.json();
             setAllproducts(data.products);
+            setProducts(data.products)
         } catch (err) {
             console.error("Failed to fetch products:", err.message);
         } finally {

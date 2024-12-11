@@ -1,6 +1,8 @@
 import localFont from "next/font/local";
 import "./globals.css";
 import { AppContextProvider } from "@/context/appContext";
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 
 const Lato = localFont({
@@ -39,6 +41,7 @@ export default function RootLayout({ children }) {
         className={`${Lato.variable} font-lato antialiased`}
       >
         <AppContextProvider>
+          <ToastContainer />
           {children}
         </AppContextProvider>
       </body>

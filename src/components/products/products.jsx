@@ -8,7 +8,7 @@ export default function Products() {
 
     const { allproducts } = useContext(AppContext)
     return (
-        <div className="relative z-10 max-w-screen-xl mx-auto px-4 py-10  gap-24  md:px-8 lg:px-8">
+        <div id='products' className="relative z-10 max-w-screen-xl mx-auto px-4 py-10  gap-24  md:px-8 lg:px-8">
             <div className="py-4 text-3xl font-semibold">
                 <h2>Popular Items</h2>
             </div>

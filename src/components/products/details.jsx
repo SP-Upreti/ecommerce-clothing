@@ -2,15 +2,37 @@
 import Image from "next/image";
 import { AppContext } from "@/context/appContext";
 import React, { useContext, useEffect, useState } from "react";
+import { toast } from "react-toastify";
 
 export default function Details({ id }) {
     const { prodDetail, productDetail, loading } = useContext(AppContext);
-
     const [mainImage, setMainImage] = useState(productDetail.thumbnail);
 
     const changeImage = (src) => {
         setMainImage(src);
     };
+
+    const addToLocalstorage = (item) => {
+
+        try {
+            const cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+
+            console.log(cartItems, item)
+            if (cartItems.some(element => element.id === item.id)) {
+
+                toast.error("item already in cart");
+                return;
+            }
+            else {
+                cartItems.push(item);
+                localStorage.setItem("cartItems", JSON.stringify(cartItems))
+                toast.success("item added to cart")
+            }
+        }
+        catch (err) {
+            toast.error(err.message)
+        }
+    }
 
     useEffect(() => {
         async function fetchDetails() {
@@ -72,6 +94,7 @@ export default function Details({ id }) {
                                                 alt={`Thumbnail ${index + 1}`}
                                                 className="w-16 h-16 sm:w-20 border bg-slate-300 sm:h-20 object-cover rounded-md cursor-pointer opacity-60 hover:opacity-100 transition duration-300"
                                                 onMouseOver={() => setMainImage(src)}
+                                                quality={30}
                                                 blurDataURL="/placeholder.jpg" // Ensure the path to `placeholder.jpg` is correct
                                                 priority={true} // Use true for critical images
                                                 loading="eager" // Use "lazy" for non-critical images
@@ -87,7 +110,10 @@ export default function Details({ id }) {
                                     <p className="text-gray-600 mb-4">SKU:{productDetail.sku}</p>
                                     <div className="mb-4">
                                         <span className="text-2xl font-bold mr-2">${productDetail.price}</span>
-                                        <span className="text-gray-500 line-through">${productDetail.price / 100 * productDetail.discountPercentage + productDetail.price}</span>
+                                        <span className="text-gray-500 line-through">
+                                            ${(productDetail.price * (1 + productDetail.discountPercentage / 100)).toFixed(2)}
+                                        </span>
+
                                     </div>
                                     <div className="flex items-center mb-4">
                                         {[...Array(5)].map((_, i) => (
@@ -110,14 +136,9 @@ export default function Details({ id }) {
                                     <p className="text-gray-700 mb-6">{productDetail.description}
                                     </p>
                                     <div className="mb-6">
-                                        <h3 className="text-lg font-semibold mb-2">Color:</h3>
+                                        <h3 className="text-lg font-semibold mb-2">Dimension:</h3>
                                         <div className="flex space-x-2">
-                                            {["bg-black", "bg-gray-300", "bg-blue-500"].map((color, i) => (
-                                                <button
-                                                    key={i}
-                                                    className={`w-8 h-8 ${color} rounded-full focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-${color}`}
-                                                ></button>
-                                            ))}
+                                            <span>w:{productDetail.dimensions?.width}  h:{productDetail.dimensions?.height}  d:{productDetail.dimensions?.depth}</span>
                                         </div>
                                     </div>
                                     <div className="mb-6">
@@ -134,7 +155,9 @@ export default function Details({ id }) {
                                         />
                                     </div>
                                     <div className="flex gap-4 flex-wrap mb-6">
-                                        <button className="bg-indigo-600 flex gap-2 items-center text-white px-6 py-2 rounded-md hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">
+                                        <button
+                                            onClick={() => { addToLocalstorage(productDetail) }}
+                                            className="bg-indigo-600 flex gap-2 items-center text-white px-6 py-2 rounded-md hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">
                                             <svg
                                                 xmlns="http://www.w3.org/2000/svg"
                                                 fill="none"
@@ -172,10 +195,10 @@ export default function Details({ id }) {
                                     <div>
                                         <h3 className="text-lg font-semibold mb-2">Key Features:</h3>
                                         <ul className="list-disc list-inside text-gray-700">
-                                            <li>Industry-leading noise cancellation</li>
-                                            <li>30-hour battery life</li>
-                                            <li>Touch sensor controls</li>
-                                            <li>Speak-to-chat technology</li>
+                                            <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</li>
+                                            <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</li>
+                                            <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</li>
+                                            <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</li>
                                         </ul>
                                     </div>
                                 </div>

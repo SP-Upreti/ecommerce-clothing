@@ -6,6 +6,7 @@ import Image from "next/image";
 import { Navigation, Pagination, A11y, Autoplay } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { useState } from "react";
+import Link from "next/link";
 
 export default function Hero() {
     const [arry, setArry] = useState([])
@@ -203,14 +204,16 @@ export default function Hero() {
                     >
                         {categories.map((item, idx) => (
                             <SwiperSlide key={idx} className="group">
-                                <div className="bg-[#EDEDED] hover:bg-white hover:shadow-md rounded-md sm:w-[168px] h-[128px] flex flex-col justify-center items-center gap-2 cursor-pointer">
-                                    <div className=" rounded-full flex justify-center items-center group-hover:animate-bounce">
-                                        <img src={item.img} alt={item.name} />
+                                <Link href={'/products'}>
+                                    <div className="bg-[#EDEDED] hover:bg-white hover:shadow-md rounded-md sm:w-[168px] h-[128px] flex flex-col justify-center items-center gap-2 cursor-pointer">
+                                        <div className=" rounded-full flex justify-center items-center group-hover:animate-bounce">
+                                            <img src={item.img} alt={item.name} />
+                                        </div>
+                                        <div className="">
+                                            <h2 className="sm:text-[18px] font-sans font-semibold capitalize">{item.name}</h2>
+                                        </div>
                                     </div>
-                                    <div className="">
-                                        <h2 className="sm:text-[18px] font-sans font-semibold capitalize">{item.name}</h2>
-                                    </div>
-                                </div>
+                                </Link>
                             </SwiperSlide>
                         ))}
                     </Swiper>

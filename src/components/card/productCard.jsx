@@ -13,6 +13,7 @@ export default function ProductCard({ data }) {
                             width={500}
                             height={500}
                             className="h-[150px] w-full object-cover sm:h-[250px] p-2 group-hover:scale-110"
+                            quality={50}
                             placeholder="blur"
                             blurDataURL="/placeholder.jpg" // Ensure the path to `placeholder.jpg` is correct
                             priority={true} // Use true for critical images
