@@ -1,14 +1,20 @@
 "use client"
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import Checkout from './checkout';
 import Link from 'next/link';
 import { toast } from 'react-toastify';
 
 export default function Cart() {
-    const ietm = JSON.parse(localStorage.getItem('cartItems'))
-    const [items, setItems] = useState(ietm || []);
-
+    const [items, setItems] = useState([]);
     const [checkout, setCheckout] = useState(false);
+
+    useEffect(() => {
+        // Only access localStorage on the client-side
+        const storedItems = localStorage.getItem('cartItems');
+        if (storedItems) {
+            setItems(JSON.parse(storedItems));
+        }
+    }, []); // Empty dependency array ensures this runs only once when the component mounts
 
     // Function to remove an item from the cart
     const removeItem = (index) => {
@@ -16,7 +22,7 @@ export default function Cart() {
         updatedItems.splice(index, 1);  // Remove item at the given index
         setItems(updatedItems);  // Update the state
         localStorage.setItem('cartItems', JSON.stringify(updatedItems));  // Update localStorage
-        toast.success("item removed")
+        toast.success("Item removed");
     };
 
     return (
@@ -30,44 +36,42 @@ export default function Cart() {
                     (
                         <div className="container mx-auto mt-10">
                             <div className="sm:flex shadow-md my-10">
-                                <div className="  w-full  sm:w-3/4 bg-white px-10 py-10">
+                                <div className="w-full sm:w-3/4 bg-white px-10 py-10">
                                     <div className="flex justify-between border-b pb-8">
                                         <h1 className="font-semibold text-2xl">Shopping Cart</h1>
                                         <h2 className="font-semibold text-2xl">{items.length} Items</h2>
                                     </div>
                                     {
-                                        items.length > 0 && items.map(
-                                            (data, key) => {
-                                                return (
-                                                    <div key={key} className="md:flex items-strech py-8 md:py-10 lg:py-8 border-t border-gray-50">
-                                                        <div className="md:w-4/12 2xl:w-1/4 w-full max-h-[250px] overflow-hidden">
-                                                            <img src={data?.images[0]} alt="Product Image" className="h-full object-center object-cover md:block " />
+                                        items.length > 0 && items.map((data, key) => {
+                                            return (
+                                                <div key={key} className="md:flex items-stretch py-8 md:py-10 lg:py-8 border-t border-gray-50">
+                                                    <div className="md:w-4/12 2xl:w-1/4 w-full max-h-[250px] overflow-hidden">
+                                                        <img src={data?.images[0]} alt="Product Image" className="h-full object-center object-cover md:block " />
+                                                    </div>
+                                                    <div className="md:pl-3 md:w-8/12 2xl:w-3/4 flex flex-col justify-center">
+                                                        <p className="text-xs leading-3 text-gray-800 md:pt-0 pt-4">{data.sku}</p>
+                                                        <div className="flex items-center justify-between w-full">
+                                                            <p className="text-base font-black leading-none text-gray-800">{data.title}</p>
+                                                            <select aria-label="Select quantity" className="py-2 px-1 border border-gray-200 mr-6 focus:outline-none">
+                                                                <option>01</option>
+                                                                <option>02</option>
+                                                                <option>03</option>
+                                                            </select>
                                                         </div>
-                                                        <div className="md:pl-3 md:w-8/12 2xl:w-3/4 flex flex-col justify-center">
-                                                            <p className="text-xs leading-3 text-gray-800 md:pt-0 pt-4">{data.sku}</p>
-                                                            <div className="flex items-center justify-between w-full">
-                                                                <p className="text-base font-black leading-none text-gray-800">{data.title}</p>
-                                                                <select aria-label="Select quantity" className="py-2 px-1 border border-gray-200 mr-6 focus:outline-none">
-                                                                    <option>01</option>
-                                                                    <option>02</option>
-                                                                    <option>03</option>
-                                                                </select>
+                                                        <p className="text-xs leading-3 text-gray-600 pt-2">Height: {data.dimensions.height}</p>
+                                                        <p className="text-xs leading-3 text-gray-600 pt-2">Width: {data.dimensions.width}</p>
+                                                        <p className="w-96 text-xs leading-3 text-gray-600 pt-2">Return Policy: {data.returnPolicy}</p>
+                                                        <div className="flex items-center justify-between pt-5">
+                                                            <div className="flex itemms-center">
+                                                                <p className="text-xs leading-3 underline text-gray-800 cursor-pointer">Add to favorites</p>
+                                                                <p className="text-xs leading-3 underline text-red-500 pl-5 cursor-pointer" onClick={() => removeItem(key)}>Remove</p>
                                                             </div>
-                                                            <p className="text-xs leading-3 text-gray-600 pt-2">Height: {data.dimensions.height}</p>
-                                                            <p className="text-xs leading-3 text-gray-600 pt-2">Width: {data.dimensions.width}</p>
-                                                            <p className="w-96 text-xs leading-3 text-gray-600 pt-2">Return Policy: {data.returnPolicy}</p>
-                                                            <div className="flex items-center justify-between pt-5">
-                                                                <div className="flex itemms-center">
-                                                                    <p className="text-xs leading-3 underline text-gray-800 cursor-pointer">Add to favorites</p>
-                                                                    <p className="text-xs leading-3 underline text-red-500 pl-5 cursor-pointer" onClick={() => removeItem(key)}>Remove</p>
-                                                                </div>
-                                                                <p className="text-base font-black leading-none text-gray-800">{data.price}</p>
-                                                            </div>
+                                                            <p className="text-base font-black leading-none text-gray-800">{data.price}</p>
                                                         </div>
                                                     </div>
-                                                )
-                                            }
-                                        )
+                                                </div>
+                                            )
+                                        })
                                     }
 
                                     <Link href={'/#products'} className="flex font-semibold text-indigo-600 text-sm mt-10">
@@ -78,7 +82,7 @@ export default function Cart() {
                                         Continue Shopping
                                     </Link>
                                 </div>
-                                <div id="summary" className=" w-full   sm:w-1/4   md:w-1/2     px-8 py-10">
+                                <div id="summary" className="w-full sm:w-1/4 md:w-1/2 px-8 py-10">
                                     <h1 className="font-semibold text-2xl border-b pb-8">Order Summary</h1>
                                     <div className="flex justify-between mt-10 mb-5">
                                         <span className="font-semibold text-sm uppercase">Items {items.length}</span>
@@ -123,7 +127,6 @@ export default function Cart() {
                         </div>
                     )
             }
-
         </div>
     )
 }
