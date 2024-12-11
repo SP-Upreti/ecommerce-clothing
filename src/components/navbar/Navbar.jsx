@@ -1,11 +1,20 @@
 "use client"
 import Link from 'next/link'
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import SearchBar from './searchbar'
 import CategoryList from './categoryList'
 
 export default function Navbar() {
-    const [toggle, setToggle] = useState(false)
+    const [toggle, setToggle] = useState(false);
+    const [totalItems, setTotalItems] = useState(0);
+
+    useEffect(() => {
+        // Only access localStorage on the client-side
+        const storedItems = localStorage.getItem('cartItems');
+        if (storedItems) {
+            setTotalItems((JSON.parse(storedItems)).length);
+        }
+    }, [totalItems]);
     return (
         <header className='shadow-md font-[sans-serif] tracking-wide relative z-50'>
             <section
@@ -66,7 +75,7 @@ export default function Navbar() {
                                         </svg>
                                         <span className='group-hover:animate-bounce '>
                                             <span
-                                                className="absolute left-auto -ml-1 -top-1 rounded-full bg-red-500 px-1 py-0 text-xs text-white ring- ">3</span>
+                                                className="absolute left-auto -ml-1 -top-1 rounded-full bg-red-500 px-1 py-0 text-xs text-white ring- ">{totalItems > 0 ? totalItems : ""}</span>
                                         </span>
                                     </span>
                                 </li>
