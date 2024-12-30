@@ -96,8 +96,8 @@ export default function Details({ id }) {
                                                 onMouseOver={() => setMainImage(src)}
                                                 quality={30}
                                                 blurDataURL="/placeholder.jpg" // Ensure the path to `placeholder.jpg` is correct
-                                                priority={true} // Use true for critical images
-                                                loading="eager" // Use "lazy" for non-critical images
+                                                priority={true} 
+                                                loading="eager" 
                                                 onError={() => console.log('Image failed to load')} // Handle image loading errors
                                             />
                                         ))}

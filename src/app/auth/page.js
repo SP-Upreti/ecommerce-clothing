@@ -18,7 +18,7 @@ const InputField = ({ id, label, type = "text", placeholder }) => (
     </div>
 );
 
-const Form = ({ title, subtitle, buttonText, linkText, linkHref, onSubmit, children, onToggle }) => (
+const Form = ({ title, subtitle, buttonText, linkText, linkHref, onSubmit, children, onToggle, link_text }) => (
     <div className=" relative flex flex-col  rounded-md text-black bg-white w-[25rem] p-10">
         <h2 className="text-2xl font-bold mb-2 text-[#1e0e4b] text-center">
             {title} <span className="text-[#7747ff]">App</span>
@@ -34,7 +34,7 @@ const Form = ({ title, subtitle, buttonText, linkText, linkHref, onSubmit, child
             </button>
         </form>
         <p className="text-sm text-center mt-4">
-            {linkText} <a className="text-sm text-[#7747ff]" href={linkHref} onClick={onToggle}>Sign up for free!</a>
+            {linkText} <a className="text-sm text-[#7747ff]" href={linkHref} onClick={onToggle}>{link_text}</a>
         </p>
     </div>
 );
@@ -46,12 +46,13 @@ export function Login({ onToggle }) {
             subtitle="Log in to your account"
             buttonText="Login"
             linkText="Don’t have an account yet?"
+            link_text={'register here'}
             linkHref="#register"
             onToggle={onToggle}
         >
             <InputField id="email" label="Email" type="email" placeholder="Enter your email" />
             <InputField id="password" label="Password" type="password" placeholder="Enter your password" />
-            <a className="text-sm text-[#7747ff] text-center mb-4" href="#">Forgot your password?</a>
+            {/* <a className="text-sm text-[#7747ff] text-center mb-4" href="#">Forgot your password?</a> */}
         </Form>
     );
 }
@@ -65,6 +66,8 @@ export function Register({ onToggle }) {
             linkText="Already have an account?"
             linkHref="#login"
             onToggle={onToggle}
+            link_text={'login here'}
+
         >
             <InputField id="email" label="Email" type="email" placeholder="Enter your email" />
             <InputField id="password" label="Password" type="password" placeholder="Create a password" />

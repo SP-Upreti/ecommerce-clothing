@@ -46,7 +46,7 @@ export default function Cart() {
                                             return (
                                                 <div key={key} className="md:flex items-stretch py-8 md:py-10 lg:py-8 border-t border-gray-50">
                                                     <div className="md:w-4/12 2xl:w-1/4 w-full max-h-[250px] overflow-hidden">
-                                                        <img src={data?.images[0]} alt="Product Image" className="h-full object-center object-cover md:block " />
+                                                        <img src={data?.images[0]} alt="Product Image" className="h-full object-center object-cover md:block " loading='eager' />
                                                     </div>
                                                     <div className="md:pl-3 md:w-8/12 2xl:w-3/4 flex flex-col justify-center">
                                                         <p className="text-xs leading-3 text-gray-800 md:pt-0 pt-4">{data.sku}</p>
@@ -71,9 +71,7 @@ export default function Cart() {
                                                     </div>
                                                 </div>
                                             )
-                                        })
-                                    }
-
+                                        })}
                                     <Link href={'/#products'} className="flex font-semibold text-indigo-600 text-sm mt-10">
                                         <svg className="fill-current mr-2 text-indigo-600 w-4" viewBox="0 0 448 512">
                                             <path
